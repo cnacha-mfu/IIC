@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligence Innovation Hub - Infographic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            width: 1200px;
+            padding: 40px;
+        }
+
+        .container {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #e94560;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(90deg, #e94560, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #a0a0a0;
+        }
+
+        .header-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 20px;
+        }
+
+        .header-stat {
+            text-align: center;
+        }
+
+        .header-stat .value {
+            font-size: 36px;
+            font-weight: 800;
+            color: #00d9ff;
+        }
+
+        .header-stat .label {
+            font-size: 14px;
+            color: #888;
+        }
+
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* Section */
+        .section {
+            background: rgba(255,255,255,0.08);
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #e94560;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title .icon {
+            width: 30px;
+            height: 30px;
+            background: #e94560;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        /* Crisis Stats */
+        .crisis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .crisis-item {
+            background: rgba(233, 69, 96, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid rgba(233, 69, 96, 0.3);
+        }
+
+        .crisis-item .number {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ff6b6b;
+        }
+
+        .crisis-item .text {
+            font-size: 12px;
+            color: #ccc;
+            margin-top: 5px;
+        }
+
+        /* Labs */
+        .labs-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .lab-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(0, 217, 255, 0.1);
+            border-radius: 8px;
+            padding: 12px 15px;
+            border-left: 4px solid #00d9ff;
+        }
+
+        .lab-number {
+            width: 28px;
+            height: 28px;
+            background: #00d9ff;
+            color: #1a1a2e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .lab-info {
+            flex: 1;
+        }
+
+        .lab-name {
+            font-weight: 700;
+            font-size: 14px;
+            color: #00d9ff;
+        }
+
+        .lab-focus {
+            font-size: 11px;
+            color: #999;
+        }
+
+        /* Budget */
+        .budget-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .budget-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .budget-label {
+            width: 100px;
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        .budget-bar-container {
+            flex: 1;
+            height: 25px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .budget-bar {
+            height: 100%;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .budget-bar.building {
+            width: 55.5%;
+            background: linear-gradient(90deg, #e94560, #ff6b6b);
+        }
+
+        .budget-bar.equipment {
+            width: 33.5%;
+            background: linear-gradient(90deg, #00d9ff, #00a8cc);
+        }
+
+        .budget-bar.operation {
+            width: 11%;
+            background: linear-gradient(90deg, #ffc107, #ff9800);
+        }
+
+        /* SAFER */
+        .safer-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        .safer-item {
+            text-align: center;
+            padding: 15px 10px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+
+        .safer-letter {
+            font-size: 32px;
+            font-weight: 800;
+            color: #00d9ff;
+        }
+
+        .safer-word {
+            font-size: 10px;
+            color: #e94560;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .safer-desc {
+            font-size: 9px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        /* Timeline */
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding-top: 20px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 35px;
+            left: 10%;
+            right: 10%;
+            height: 4px;
+            background: linear-gradient(90deg, #e94560, #00d9ff);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            text-align: center;
+            width: 30%;
+            position: relative;
+        }
+
+        .timeline-year {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #e94560, #ff6b6b);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            margin: 0 auto 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-title {
+            font-weight: 700;
+            color: #00d9ff;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .timeline-desc {
+            font-size: 11px;
+            color: #999;
+            line-height: 1.4;
+        }
+
+        /* KPIs */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .kpi-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 217, 255, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+        }
+
+        .kpi-value {
+            font-size: 24px;
+            font-weight: 800;
+            color: #00d9ff;
+        }
+
+        .kpi-label {
+            font-size: 11px;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        /* Full Width Section */
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        /* Bottom Section */
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Partners */
+        .partners-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .partner-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+
+        .partner-logo {
+            width: 35px;
+            height: 35px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #1a1a2e;
+            font-weight: 700;
+        }
+
+        .partner-name {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* Quote */
+        .quote-section {
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.2), rgba(0, 217, 255, 0.2));
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .quote-text {
+            font-size: 16px;
+            font-style: italic;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .quote-highlight {
+            color: #00d9ff;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #666;
+            font-size: 12px;
+        }
+
+        .footer .logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: #e94560;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Intelligence Innovation Hub</h1>
+            <h2>ศูนย์นวัตกรรมปัญญาประดิษฐ์และหุ่นยนต์อัจฉริยะ | มหาวิทยาลัยแม่ฟ้าหลวง</h2>
+            <div class="header-stats">
+                <div class="header-stat">
+                    <div class="value">200</div>
+                    <div class="label">ล้านบาท</div>
+                </div>
+                <div class="header-stat">
+                    <div class="value">3,000</div>
+                    <div class="label">ตร.ม.</div>
+                </div>
+                <div class="header-stat">
+                    <div class="value">3</div>
+                    <div class="label">ปี (2570-2572)</div>
+                </div>
+                <div class="header-stat">
+                    <div class="value">5</div>
+                    <div class="label">Labs เฉพาะทาง</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="main-grid">
+            <!-- Crisis Section -->
+            <div class="section">
+                <div class="section-title">
+                    <div class="icon">!</div>
+                    วิกฤตขาดแคลนบุคลากร AI ในประเทศไทย
+                </div>
+                <div class="crisis-grid">
+                    <div class="crisis-item">
+                        <div class="number">80,000</div>
+                        <div class="text">ขาดแคลนบุคลากร AI</div>
+                    </div>
+                    <div class="crisis-item">
+                        <div class="number">70,000</div>
+                        <div class="text">ขาดบุคลากรดิจิทัล/ปี</div>
+                    </div>
+                    <div class="crisis-item">
+                        <div class="number">78%</div>
+                        <div class="text">งาน IT ต้องการทักษะ AI</div>
+                    </div>
+                    <div class="crisis-item">
+                        <div class="number">+36%</div>
+                        <div class="text">เงินเดือนเพิ่มสำหรับ AI</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 Labs -->
+            <div class="section">
+                <div class="section-title">
+                    <div class="icon">🔬</div>
+                    5 ห้องปฏิบัติการเฉพาะทาง
+                </div>
+                <div class="labs-list">
+                    <div class="lab-item">
+                        <div class="lab-number">1</div>
+                        <div class="lab-info">
+                            <div class="lab-name">Software Intelligence Lab</div>
+                            <div class="lab-focus">Agile Dev, AI Software, Startup MVP</div>
+                        </div>
+                    </div>
+                    <div class="lab-item">
+                        <div class="lab-number">2</div>
+                        <div class="lab-info">
+                            <div class="lab-name">Vision & Neural Lab</div>
+                            <div class="lab-focus">Computer Vision, Deep Learning</div>
+                        </div>
+                    </div>
+                    <div class="lab-item">
+                        <div class="lab-number">3</div>
+                        <div class="lab-info">
+                            <div class="lab-name">Generative AI & Data Lab</div>
+                            <div class="lab-focus">GenAI, LLM Fine-tuning, Analytics</div>
+                        </div>
+                    </div>
+                    <div class="lab-item">
+                        <div class="lab-number">4</div>
+                        <div class="lab-info">
+                            <div class="lab-name">Autonomous Systems Lab</div>
+                            <div class="lab-focus">Robotics, Drones, Embedded AI</div>
+                        </div>
+                    </div>
+                    <div class="lab-item">
+                        <div class="lab-number">5</div>
+                        <div class="lab-info">
+                            <div class="lab-name">Industrial AI & IoT Lab</div>
+                            <div class="lab-focus">Smart Manufacturing, Industry 4.0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Budget -->
+            <div class="section">
+                <div class="section-title">
+                    <div class="icon">💰</div>
+                    งบประมาณ 200 ล้านบาท
+                </div>
+                <div class="budget-bars">
+                    <div class="budget-item">
+                        <div class="budget-label">ก่อสร้างอาคาร</div>
+                        <div class="budget-bar-container">
+                            <div class="budget-bar building">111 ล้าน (55.5%)</div>
+                        </div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-label">ครุภัณฑ์</div>
+                        <div class="budget-bar-container">
+                            <div class="budget-bar equipment">67 ล้าน (33.5%)</div>
+                        </div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-label">ดำเนินการ</div>
+                        <div class="budget-bar-container">
+                            <div class="budget-bar operation">22 ล้าน</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAFER Design -->
+            <div class="section">
+                <div class="section-title">
+                    <div class="icon">🏗️</div>
+                    การออกแบบอาคาร "SAFER"
+                </div>
+                <div class="safer-grid">
+                    <div class="safer-item">
+                        <div class="safer-letter">S</div>
+                        <div class="safer-word">SEISMIC</div>
+                        <div class="safer-desc">ทนแผ่นดินไหว</div>
+                    </div>
+                    <div class="safer-item">
+                        <div class="safer-letter">A</div>
+                        <div class="safer-word">AFFORDABLE</div>
+                        <div class="safer-desc">ประหยัด/เร็ว</div>
+                    </div>
+                    <div class="safer-item">
+                        <div class="safer-letter">F</div>
+                        <div class="safer-word">FLOOD</div>
+                        <div class="safer-desc">ทนน้ำท่วม</div>
+                    </div>
+                    <div class="safer-item">
+                        <div class="safer-letter">E</div>
+                        <div class="safer-word">ECO</div>
+                        <div class="safer-desc">เป็นมิตรสิ่งแวดล้อม</div>
+                    </div>
+                    <div class="safer-item">
+                        <div class="safer-letter">R</div>
+                        <div class="safer-word">REGIONAL</div>
+                        <div class="safer-desc">เหมาะภูมิอากาศ</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="section full-width">
+                <div class="section-title">
+                    <div class="icon">📅</div>
+                    แผนดำเนินงาน 3 ปี
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2570</div>
+                        <div class="timeline-title">วางรากฐาน</div>
+                        <div class="timeline-desc">เริ่มก่อสร้าง<br>จัดซื้อหุ่นยนต์ 10 ตัว<br>MOU Huawei ICT Academy</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2571</div>
+                        <div class="timeline-title">เปิดดำเนินการ</div>
+                        <div class="timeline-desc">เปิดอาคารอย่างเป็นทางการ<br>เริ่มฝึกอบรม<br>รับสตาร์ทอัพรุ่นแรก 5 ราย</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2572</div>
+                        <div class="timeline-title">ขยายผล</div>
+                        <div class="timeline-desc">สำเร็จช่างเทคนิครุ่นแรก<br>ฝึกอบรมสะสม 1,500+ คน<br>ตีพิมพ์วิจัย 30 ผลงาน</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KPIs -->
+            <div class="section full-width">
+                <div class="section-title">
+                    <div class="icon">🎯</div>
+                    เป้าหมาย 5 ปี
+                </div>
+                <div class="kpi-grid">
+                    <div class="kpi-item">
+                        <div class="kpi-value">5,000</div>
+                        <div class="kpi-label">ผู้ผ่านการฝึกอบรม AI</div>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">1,000</div>
+                        <div class="kpi-label">ช่างเทคนิคหุ่นยนต์ที่ได้รับใบรับรอง</div>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">50</div>
+                        <div class="kpi-label">สตาร์ทอัพที่ได้รับการบ่มเพาะ</div>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">100</div>
+                        <div class="kpi-label">ผลงานวิจัยตีพิมพ์ระดับนานาชาติ</div>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">500+</div>
+                        <div class="kpi-label">ผู้เข้าร่วมจาก CLMV</div>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-value">500</div>
+                        <div class="kpi-label">ล้านบาท มูลค่าเศรษฐกิจ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom-section">
+            <!-- Partners -->
+            <div class="section">
+                <div class="section-title">
+                    <div class="icon">🤝</div>
+                    พันธมิตรยุทธศาสตร์
+                </div>
+                <div class="partners-list">
+                    <div class="partner-item">
+                        <div class="partner-logo">HW</div>
+                        <div class="partner-name">Huawei ICT Academy</div>
+                    </div>
+                    <div class="partner-item">
+                        <div class="partner-logo">UB</div>
+                        <div class="partner-name">UBTECH Robotics</div>
+                    </div>
+                    <div class="partner-item">
+                        <div class="partner-logo">UT</div>
+                        <div class="partner-name">Unitree Robotics</div>
+                    </div>
+                    <div class="partner-item">
+                        <div class="partner-logo">SJTU</div>
+                        <div class="partner-name">Shanghai Jiao Tong Univ.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategic Position -->
+            <div class="section">
+                <div class="section-title">
+                    <div class="icon">📍</div>
+                    จุดยุทธศาสตร์
+                </div>
+                <div style="font-size: 13px; line-height: 1.8; color: #ccc;">
+                    <div style="margin-bottom: 8px;">🔺 <strong style="color: #00d9ff;">สามเหลี่ยมทองคำ</strong> - จุดบรรจบ 3 ประเทศ</div>
+                    <div style="margin-bottom: 8px;">🚂 <strong style="color: #00d9ff;">รถไฟจีน-ลาว</strong> - เชื่อมต่อคุนหมิง</div>
+                    <div style="margin-bottom: 8px;">🛣️ <strong style="color: #00d9ff;">AH3</strong> - เส้นทางหลวงเอเชีย</div>
+                    <div>🌏 <strong style="color: #00d9ff;">300+ ล้านคน</strong> - ประชากร CLMV</div>
+                </div>
+            </div>
+
+            <!-- Policy Alignment -->
+            <div class="section">
+                <div class="section-title">
+                    <div class="icon">📋</div>
+                    สอดคล้องนโยบาย
+                </div>
+                <div style="font-size: 12px; line-height: 1.8; color: #ccc;">
+                    <div style="margin-bottom: 6px;">✓ ยุทธศาสตร์ชาติ 20 ปี</div>
+                    <div style="margin-bottom: 6px;">✓ แผนยุทธศาสตร์ AI แห่งชาติ</div>
+                    <div style="margin-bottom: 6px;">✓ Thailand 4.0</div>
+                    <div>✓ Reinventing University</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quote -->
+        <div class="quote-section">
+            <div class="quote-text">
+                "ภายใน 5 ปี มหาวิทยาลัยแม่ฟ้าหลวงจะเป็น<span class="quote-highlight">ศูนย์กลาง AI และหุ่นยนต์ที่ขาดไม่ได้ของภูมิภาคลุ่มน้ำโขง</span><br>
+                รับใช้ประชากร 300+ ล้านคน และช่วยลดช่องว่างบุคลากร AI 80,000 คนของประเทศไทย"
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="logo">Mae Fah Luang University</div>
+            มหาวิทยาลัยแม่ฟ้าหลวง | จังหวัดเชียงราย | www.mfu.ac.th
+        </div>
+    </div>
+</body>
+</html>

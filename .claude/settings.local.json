@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.ocac.go.th)",
+      "WebFetch(domain:dic-website-853767948689.us-central1.run.app)",
+      "Bash(pip show:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(dir:*)",
+      "Bash(unzip:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
