@@ -10,7 +10,10 @@
       "Bash(dir:*)",
       "Bash(unzip:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "WebFetch(domain:200m.mdes.go.th)",
+      "WebFetch(domain:cio.mhesi.go.th)",
+      "WebFetch(domain:itcenter.prd.go.th)"
     ]
   }
 }
