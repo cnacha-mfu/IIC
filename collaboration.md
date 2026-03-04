@@ -2,7 +2,9 @@
 
 *As of March 2026*
 
-MFU is uniquely positioned to become the GMS AI innovation hub through China partnerships. Chiang Rai's R3A Highway corridor to Yunnan, MFU's active Chinese institutional networks (Confucius Institute, Thai-Yunnan Universities Network), English-medium instruction, and multidisciplinary faculties (health sciences, agro-industry, digital technology) create advantages no other Thai university outside Bangkok can match. Thailand has committed **$15.4B+** toward AI infrastructure; China launched the **China-ASEAN AI Application Cooperation Center** in 2026. The first major China expos are **3 months away** — action is needed now.
+MFU is uniquely positioned to become the GMS hub where Chinese AI and robotics technology is **localized, trained, and deployed into the ASEAN market**. This is not about signing MOUs — it is about building **training centers** that certify ASEAN workforce on Chinese platforms, **technology transfer** that adapts Chinese products for tropical agriculture, Southeast Asian healthcare, and regional regulatory environments, and **development centers** where Chinese companies establish a physical presence to co-develop and commercialize products for 326 million GMS consumers.
+
+Chiang Rai's R3A Highway corridor to Yunnan, MFU's active Chinese institutional networks (Confucius Institute, Thai-Yunnan Universities Network), English-medium instruction, and multidisciplinary faculties (health sciences, agro-industry, digital technology) create advantages no other Thai university outside Bangkok can match. Thailand has committed **$15.4B+** toward AI infrastructure; China launched the **China-ASEAN AI Application Cooperation Center** in 2026. The first major China expos are **3 months away** — action is needed now.
 
 ---
 
@@ -50,21 +52,33 @@ MFU is uniquely positioned to become the GMS AI innovation hub through China par
 
 ---
 
+## What we want: real collaboration, not MOUs
+
+The goal is not to collect signed agreements — it is to build **operational infrastructure** that makes MFU the gateway for Chinese AI and robotics technology entering the ASEAN market. Three concrete deliverables:
+
+1. **Training centers** where Chinese companies certify ASEAN workforce on their technology platforms
+2. **Technology transfer and localization** — adapting Chinese AI/robotics products for tropical agriculture, Southeast Asian healthcare systems, and ASEAN regulatory/language environments
+3. **Development centers** where Chinese companies establish a physical presence at MFU to co-develop, test, and deploy products for the GMS market
+
+This is a value exchange: Chinese companies get a **launchpad into 326 million ASEAN consumers** with English-speaking R&D support, local regulatory navigation, and a trained talent pipeline. MFU gets technology, equipment, industry-linked curricula, and a role as the regional hub.
+
+---
+
 ## Proposed initiatives
 
 ### 1. Launch the inaugural Mekong AI Forum at MFU (the jumpstart)
 
-The Mekong AI Forum (MAF) is the catalyst that converts all other initiatives from plans into commitments. A single, well-designed event can simultaneously establish an alliance, launch platforms, and generate dozens of concrete partnerships — the China-ASEAN AI Application Ecosystem Exchange Conference in Nanning (2025) produced 50+ signed agreements in one edition. The LMC Innovation Corridor's Joint Initiatives explicitly call for "exploring the possibility to establish a meeting mechanism for the LMC Innovation Corridor" — MAF fills this vacuum.
+The Mekong AI Forum (MAF) is the catalyst that converts plans into operational commitments. The event should not end with MOU signings — it should end with **launch announcements** for training centers, technology localization projects, and development partnerships with concrete timelines and deliverables.
 
-**Format:** 2.5-day event with three pillars — Summit (keynotes and panels), Expo (live Chinese robotics demonstrations in thematic zones), and Connect (pre-arranged B2U matchmaking culminating in an MOU signing ceremony and official launch of MFU's AI Innovation Center). Target **300–500 attendees**, **5–10 signed MOUs**, and founding partner announcements for the Innovation Center. Budget: **$150K–$200K** (฿5–7M), funded through a mix of university budget, government grants (TCEB, MHESI, DEPA), corporate sponsorships, and registration fees.
+**Format:** 2.5-day event with three pillars — Summit (keynotes and panels), Expo (live Chinese robotics demonstrations in thematic zones), and Connect (pre-arranged B2U matchmaking culminating in founding partner announcements and operational launch commitments for MFU's AI Innovation Center). Target **300–500 attendees** and **3–5 operational partnership launches**. Budget: **$150K–$200K** (฿5–7M), funded through a mix of university budget, government grants (TCEB, MHESI, DEPA), corporate sponsorships, and registration fees.
 
 **Target timeline:** Q3 2027 (starting preparation now in March 2026 gives us the 14–16 months needed for Chinese corporate delegation building and government endorsements).
 
 **Government endorsements to secure:** MHESI (Thailand's LMC Innovation Corridor focal point), BOI (investment credibility), DEPA (digital economy funding via Digital Event Marketing Fund), NSTDA (research credibility and R&D tax incentive certification), and TCEB (direct conference funding and logistics support).
 
-### 2. Find contacts and build relationships through China expos (pre-MAF groundwork)
+### 2. Find contacts and build relationships through China expos
 
-Before MAF can succeed, MFU must establish face-to-face relationships with the 20 target companies. Chinese business culture demands **guanxi (关系)** — cold outreach alone will not secure senior delegation attendance. A senior MFU delegation (3–5 people led by the President/VP, including a Mandarin speaker from the Confucius Institute or School of Sinology) should attend major expos carrying bilingual partnership proposals to meet target companies, invite them to MAF, and begin MOU pre-negotiations.
+MFU must establish face-to-face relationships with the 20 target companies before any real collaboration can begin. Chinese business culture demands **guanxi (关系)** — cold outreach alone will not work. A senior MFU delegation (3–5 people led by the President/VP, including a Mandarin speaker from the Confucius Institute or School of Sinology) should attend major expos to meet target companies, pitch MFU as their ASEAN localization partner, and begin scoping operational partnerships.
 
 **Priority expos — all in 2026, starting in 3 months:**
 
@@ -78,26 +92,41 @@ Before MAF can succeed, MFU must establish face-to-face relationships with the 2
 **HQ visits** (schedule around expos): Shenzhen (UBTECH, Inovance, Pudu, DJI, Edge Medical), Shanghai (KEENON, Fourier, JAKA, MicroPort MedBot), Hangzhou (Unitree, Alibaba Cloud), Guangzhou (XAG).
 
 **Immediate actions (March–April 2026):**
-- Prepare bilingual (English-Chinese) partnership proposal brief (2–3 pages) with specific collaboration models per company
+- Prepare bilingual (English-Chinese) partnership proposal brief — pitch MFU as the ASEAN localization and training hub, not just a research partner
 - Establish WeChat accounts for all delegation members
-- Send presidential letters through Confucius Institute, Thai-Yunnan Universities Network, and Chinese Consulate in Chiang Mai requesting introductions to target companies
+- Send presidential letters through Confucius Institute, Thai-Yunnan Universities Network, and Chinese Consulate in Chiang Mai
 - Contact BOI Shanghai office for introductions to SIASUN, Estun, Inovance
 - Apply directly to Alibaba Cloud Academy, Huawei ICT Academy, and UBTECH AIC programs
 - Activate Thai-side intermediaries: CP Group/Chia Tai (for XAG), Siam Kubota (for DJI), NSTDA (for SIASUN)
 - Begin LinkedIn/WeChat outreach to BD managers at mid-size companies (JAKA, Geek+, KEENON, Edge Medical, Fourier)
 
-### 3. Secure 2–3 anchor partnerships with companies that have proven university templates
+### 3. Set up training and certification centers with anchor partners
 
-Prioritize companies with existing, replicable university collaboration models: **UBTECH** (replicate Vietnam National University AI Center model), **SIASUN** (replicate XJTLU/EECi Innovation Center model), and **Alibaba Cloud** (replicate Chulalongkorn Skills Center model). These anchor partnerships provide the credibility and structure for the Innovation Center — once announced at MAF, they signal to remaining companies that MFU is a serious platform.
+Prioritize companies that already run training programs replicable at MFU:
+- **UBTECH** — replicate Vietnam National University AI Center: AI/robotics curriculum, student certification, educator training across the GMS
+- **SIASUN** — replicate XJTLU/EECi Innovation Center: smart manufacturing workforce training, industry certification for northern Thailand and cross-border workforce
+- **Alibaba Cloud** — replicate Chulalongkorn Skills Center: cloud computing and AI certification programs, building a pool of Alibaba-certified developers in the region
+- **XAG/DJI** — drone operator training and certification academy for precision agriculture across the Mekong corridor
+- **Huawei** — expand existing ICT Academy at MFU into 5G, IoT, and agricultural AI training tracks
 
-### 4. Establish four sector-specific labs within the AI Innovation Center
+These are not research collaborations — they are **operational training centers** producing certified professionals that feed directly into each company's ASEAN market expansion.
 
-Launch at MAF with founding partners:
-- **Smart Agriculture AI Lab** — anchored by XAG + Huawei (5G/IoT) + Pinduoduo (competitions)
-- **Healthcare Robotics Lab** — anchored by Fourier (rehab) + MicroPort MedBot (surgical) + Infervision (imaging AI)
-- **Industrial Automation Lab** — anchored by SIASUN/Inovance + JAKA (education cobots)
-- **Humanoid & Service Robotics Lab** — anchored by UBTECH (curriculum/research) + Unitree (platforms) + KEENON (hospitality)
+### 4. Establish technology localization and development centers
 
-### 5. Apply for LMC Innovation Corridor designation and international funding
+MFU's value proposition to Chinese companies is clear: **"Use MFU as your base to adapt and deploy your technology for the ASEAN market."** Four sector-specific centers, each with a concrete localization mission:
 
-Pursue LMC Special Fund financing ($250K–$460K typical grants), Silk Road Scholarship and ACYLS for student/researcher exchange, Thailand BOI investment incentives, and position MFU as the official GMS node of the China-ASEAN AI Application Cooperation Center. The Mekong AI Forum and Innovation Center launch provide the institutional basis for these applications.
+- **Smart Agriculture Center** — adapt Chinese precision farming AI (XAG drones, Huawei IoT, Pinduoduo greenhouse AI) for tropical crops, Thai/ASEAN regulatory standards, and smallholder farming economics. Test and validate in Chiang Rai's fields before scaling across GMS.
+- **Healthcare Technology Center** — localize Chinese medical AI and robotics (Fourier rehab robots, MicroPort surgical systems, Infervision diagnostic AI) for Thai FDA/ASEAN regulatory approval, local disease profiles (TB, tropical diseases), and integration with Thai public health infrastructure.
+- **Industrial Automation Center** — co-develop with SIASUN/Inovance to customize Chinese industrial robots and automation systems for Thailand's manufacturing base (auto parts, EV components, food processing), including Thai-language interfaces and local safety compliance.
+- **Service Robotics Center** — localize Chinese service robots (KEENON, Pudu, UBTECH) for Thai hospitality, healthcare, and retail markets — Thai-language interaction, cultural service norms, local connectivity standards. Use MFU campus and Chiang Rai tourism businesses as live testbeds.
+
+The pitch to every company is the same: **MFU provides the facility, the bilingual talent, and the regulatory pathway. You bring the technology. Together we build products that work in ASEAN.**
+
+### 5. Secure government backing and funding for the Innovation Center
+
+Pursue funding not for research grants but for **operational infrastructure**:
+- **BOI investment incentives** for Chinese companies establishing development centers at MFU
+- **DEPA funding** for digital technology training and workforce development programs
+- **LMC Special Fund** for cross-border technology cooperation projects ($250K–$460K typical grants)
+- **Silk Road Scholarship and ACYLS** for talent pipeline — training ASEAN students on Chinese technology platforms
+- Position MFU as the official **GMS node of the China-ASEAN AI Application Cooperation Center**
