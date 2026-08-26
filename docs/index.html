@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MFU-ARIC · แผนการใช้พื้นที่อาคาร</title>
+<meta name="description" content="แผนการใช้พื้นที่และปรับปรุงอาคาร ๔ ชั้น ศูนย์นวัตกรรมด้านปัญญาประดิษฐ์และหุ่นยนต์ มหาวิทยาลัยแม่ฟ้าหลวง">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f6f3; --surface:#ffffff; --ink:#1b1c1e; --muted:#5d6167; --line:#e2e0da;
+  --accent:#0d3b66; --accent-soft:#e8eff7;
+  --f1:#c9713c; --f2:#3f8f6f; --f3:#0d3b66; --f4:#6b5b95;
+  --radius:14px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#141517; --surface:#1c1e21; --ink:#eceef0; --muted:#a2a8b0; --line:#2e3237;
+    --accent:#7fb0e0; --accent-soft:#1e2a38;
+    --f1:#e0925c; --f2:#5fb894; --f3:#7fb0e0; --f4:#a292c9;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Sarabun","TH Sarabun New",system-ui,sans-serif;
+  font-size:17px; line-height:1.75; font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.35;font-weight:700;margin:0}
+a{color:var(--accent)}
+
+/* ---------- hero ---------- */
+header.hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:14px;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:12px}
+h1{font-size:clamp(28px,4.4vw,44px);letter-spacing:-.01em}
+.lede{color:var(--muted);font-size:18px;margin-top:14px;max-width:62ch}
+.meta{margin-top:18px;font-size:14px;color:var(--muted)}
+.badge{display:inline-block;background:var(--accent-soft);color:var(--accent);
+  border-radius:100px;padding:3px 12px;font-size:13px;font-weight:600;margin-left:6px}
+
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;margin:34px 0 0}
+.stat{background:var(--surface);padding:18px 16px}
+.stat b{display:block;font-size:26px;font-weight:700;letter-spacing:-.01em}
+.stat span{font-size:13.5px;color:var(--muted)}
+
+/* ---------- nav ---------- */
+nav.floors{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 0;margin-top:44px}
+nav.floors .wrap{display:flex;gap:8px;flex-wrap:wrap;font-size:14.5px}
+nav.floors a{text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:100px;font-weight:600}
+nav.floors a:hover{background:var(--accent-soft);color:var(--accent)}
+
+section{padding:52px 0;border-bottom:1px solid var(--line)}
+h2{font-size:26px;margin-bottom:6px}
+.sub{color:var(--muted);font-size:16px;margin:0 0 26px}
+
+/* ---------- stack diagram ---------- */
+.stack{display:flex;flex-direction:column-reverse;gap:6px;margin:26px 0 8px}
+.level{display:flex;align-items:center;gap:16px;background:var(--surface);
+  border:1px solid var(--line);border-right:6px solid var(--c);
+  border-radius:10px;padding:13px 18px}
+.level .n{font-size:22px;font-weight:700;color:var(--c);min-width:42px}
+.level .t{font-weight:600}
+.level .d{color:var(--muted);font-size:14.5px;margin-right:auto}
+.level .tier{font-size:12.5px;color:var(--muted);white-space:nowrap;
+  border:1px solid var(--line);border-radius:100px;padding:2px 10px}
+
+/* ---------- floor blocks ---------- */
+.floor{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;margin-bottom:22px;border-top:4px solid var(--c)}
+.floor h3{font-size:21px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.floor h3 .tag{font-size:13px;font-weight:600;color:var(--c);border:1px solid var(--c);
+  border-radius:100px;padding:1px 10px}
+.floor .concept{color:var(--muted);margin:10px 0 18px;font-size:16px}
+.tblwrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15.5px;min-width:520px}
+th,td{text-align:right;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th:first-child,td:first-child{text-align:left}
+th:nth-child(2),td:nth-child(2),th:nth-child(3),td:nth-child(3){text-align:center;white-space:nowrap}
+thead th{font-size:13.5px;color:var(--muted);font-weight:600;border-bottom:1px solid var(--line)}
+td:last-child{text-align:left;color:var(--muted)}
+tr:last-child td{border-bottom:none}
+tfoot td{font-weight:700;border-top:2px solid var(--line);border-bottom:none;padding-top:11px}
+.note{background:var(--accent-soft);border-radius:10px;padding:13px 16px;margin-top:16px;
+  font-size:15px;color:var(--ink)}
+.note b{color:var(--accent)}
+
+/* ---------- decisions ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.card .id{font-size:12.5px;font-weight:700;letter-spacing:.06em;color:var(--accent);
+  background:var(--accent-soft);border-radius:100px;padding:2px 10px;display:inline-block}
+.card h4{margin:12px 0 8px;font-size:17px}
+.card p{margin:0 0 10px;font-size:15px;color:var(--muted)}
+.card .rec{font-size:15px;border-top:1px solid var(--line);padding-top:10px}
+.card .rec b{color:var(--ink)}
+
+/* ---------- timeline ---------- */
+ol.tl{list-style:none;margin:0;padding:0;position:relative}
+ol.tl:before{content:"";position:absolute;right:74px;top:8px;bottom:8px;width:2px;background:var(--line)}
+ol.tl li{display:flex;gap:18px;padding:9px 0;align-items:flex-start}
+ol.tl .q{min-width:66px;text-align:left;font-size:13.5px;color:var(--muted);font-weight:600;
+  border:1px solid var(--line);border-radius:100px;padding:2px 0;text-align:center;background:var(--surface);
+  order:2;position:relative;z-index:1}
+ol.tl .body{order:1;flex:1;text-align:right}
+ol.tl .body b{display:block;font-size:16px}
+ol.tl .body span{font-size:14.5px;color:var(--muted)}
+
+footer{padding:38px 0 60px;color:var(--muted);font-size:14.5px}
+footer p{margin:.4em 0}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:40px 0}
+  .level{flex-wrap:wrap;gap:8px}
+  .level .tier{order:3}
+  ol.tl:before{display:none}
+}
+@media print{
+  nav.floors{display:none}
+  body{background:#fff;font-size:12pt}
+  section{page-break-inside:avoid;border-bottom:none}
+  .floor{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">มหาวิทยาลัยแม่ฟ้าหลวง · สำนักวิชาเทคโนโลยีดิจิทัลประยุกต์</div>
+    <h1>แผนการใช้พื้นที่และปรับปรุงอาคาร<br>ศูนย์นวัตกรรมด้านปัญญาประดิษฐ์และหุ่นยนต์</h1>
+    <p class="lede">
+      ผังการใช้พื้นที่อาคาร ๔ ชั้น ชั้นละประมาณ ๔๐๐ ตารางเมตร สำหรับศูนย์ MFU-ARIC
+      ประกอบด้วยแนวคิดการออกแบบรายชั้น รายการห้อง ขนาดพื้นที่ ประเด็นที่ต้องตัดสินใจ
+      และประมาณการค่าใช้จ่ายเบื้องต้น
+    </p>
+    <p class="meta">ฉบับย่อ v1.4 · สิงหาคม ๒๕๖๙ · ร่างเพื่อพิจารณา <span class="badge">เอกสารภายใน</span></p>
+
+    <div class="stats">
+      <div class="stat"><b>๑,๖๐๐</b><span>ตร.ม. พื้นที่รวม (๔ ชั้น)</span></div>
+      <div class="stat"><b>๑,๓๖๐</b><span>ตร.ม. ใช้สอยสุทธิ</span></div>
+      <div class="stat"><b>๓๓</b><span>ห้อง</span></div>
+      <div class="stat"><b>๑๒๐</b><span>ที่นั่งอบรมสูงสุด</span></div>
+      <div class="stat"><b>฿๕๘–๖๘ ล.</b><span>ประมาณการงานปรับปรุง</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="floors">
+  <div class="wrap">
+    <a href="#concept">แนวคิด</a>
+    <a href="#f1">ชั้น ๑ ประตูหน้า</a>
+    <a href="#f2">ชั้น ๒ ฝึกอบรม</a>
+    <a href="#f3">ชั้น ๓ ห้องปฏิบัติการ</a>
+    <a href="#f4">ชั้น ๔ สำนักงาน</a>
+    <a href="#decide">ประเด็นตัดสินใจ</a>
+    <a href="#cost">งบประมาณ</a>
+    <a href="#plan">ลำดับงาน</a>
+  </div>
+</nav>
+
+<section id="concept">
+  <div class="wrap">
+    <h2>แนวคิดหลัก — “เปิดที่ชั้นล่าง ปิดที่ชั้นบน”</h2>
+    <p class="sub">
+      ศูนย์ ARIC ต้องทำ ๔ หน้าที่ที่ขัดแย้งกันในอาคารเดียว คือ ต้อนรับบุคคลภายนอก · ฝึกอบรมจำนวนมาก ·
+      วิจัยที่ต้องควบคุมการเข้าถึง · และบริหารจัดการศูนย์ จึงจัดวางเป็นลำดับชั้นของการเข้าถึง
+      เพื่อให้ผู้มาเยือนไม่ต้องเดินผ่านพื้นที่วิจัย และนักวิจัยไม่ถูกรบกวนจากคณะเยี่ยมชม
+    </p>
+
+    <div class="stack">
+      <div class="level" style="--c:var(--f1)">
+        <span class="n">๑</span><span class="t">ประตูหน้า</span>
+        <span class="d">ทำงานร่วม · บ่มเพาะ · จัดแสดง · เวทีนำเสนอ</span>
+        <span class="tier">ระดับ ๐ · สาธารณะ</span>
+      </div>
+      <div class="level" style="--c:var(--f2)">
+        <span class="n">๒</span><span class="t">โรงงานการเรียนรู้</span>
+        <span class="d">ห้องปฏิบัติการคอมพิวเตอร์อเนกประสงค์ ๖๐/๑๒๐ ที่นั่ง</span>
+        <span class="tier">ระดับ ๑ · ผู้ลงทะเบียน</span>
+      </div>
+      <div class="level" style="--c:var(--f3)">
+        <span class="n">๓</span><span class="t">ห้องเครื่อง</span>
+        <span class="d">ห้องเครื่อง GPU · วิจัย AI · สนามหุ่นยนต์ · สตูดิโอ</span>
+        <span class="tier">ระดับ ๒–๓ · สังกัดโครงการ</span>
+      </div>
+      <div class="level" style="--c:var(--f4)">
+        <span class="n">๔</span><span class="t">สะพานเชื่อม</span>
+        <span class="d">สำนักงาน · ผู้บริหาร · งานที่ปรึกษาและพันธมิตร</span>
+        <span class="tier">ระดับ ๒ · เจ้าหน้าที่</span>
+      </div>
+    </div>
+
+    <div class="note">
+      <b>สาขาเรือธง = สุขภาพและสังคมสูงวัย</b> จึงได้พื้นที่จริงที่ประตูหน้าอาคาร คือ
+      ห้องปฏิบัติการใช้ชีวิตจริงที่ชั้น ๑ เพื่อให้สิ่งแรกที่ผู้มาเยือนเห็นคือสาขาเรือธง ไม่ใช่ตู้เซิร์ฟเวอร์ ·
+      ตำแหน่งของศูนย์อยู่ที่ <b>ชั้นการประยุกต์ใช้</b> ของ Physical AI Stack ตามแนวคิด “สร้างสมอง ไม่สร้างมือกล”
+      ผังอาคารจึงให้พื้นที่แก่งานประมวลผลและ AI มาก และให้พื้นที่งานเครื่องกลหนักน้อยโดยเจตนา
+    </div>
+  </div>
+</section>
+
+<section id="f1">
+  <div class="wrap">
+    <h2>รายการห้องรายชั้น</h2>
+    <p class="sub">พื้นที่ใช้สอยสุทธิชั้นละ ~๓๔๐ ตร.ม. (หักพื้นที่แกนกลางอาคารประมาณ ๑๕ %)</p>
+
+    <div class="floor" style="--c:var(--f1)">
+      <h3>ชั้น ๑ · ประตูหน้า <span class="tag">๑๐ ห้อง · ๓๔๐ ตร.ม.</span></h3>
+      <p class="concept">
+        ชั้นล่างที่คนแปลกหน้าเดินเข้ามาได้ ทุกพื้นที่ออกแบบให้เข้าได้โดยไม่ต้องขออนุญาต
+        และเข้าใจได้โดยไม่ต้องมีคนอธิบาย ทำหน้าที่ระดมทุน ดึงดูดบุคลากร และสร้างพันธมิตร
+      </p>
+      <div class="tblwrap"><table>
+        <thead><tr><th>ห้อง</th><th>ตร.ม.</th><th>ความจุ</th><th>หน้าที่หลัก</th></tr></thead>
+        <tbody>
+          <tr><td>โถงต้อนรับและพื้นที่จัดแสดง</td><td>35</td><td>—</td><td>ลงทะเบียนผู้มาเยือน นิทรรศการผลงาน หุ่นยนต์ฮิวแมนนอยด์บนแท่นสาธิต</td></tr>
+          <tr><td>ห้องปฏิบัติการใช้ชีวิตจริงเพื่อสังคมสูงวัย</td><td>35</td><td>8</td><td>ห้องจำลองที่พักอาศัยสำหรับสาขาเรือธงด้านสุขภาพ ใช้เป็นฉากถ่ายทำและห้องสาธิต</td></tr>
+          <tr><td>เวทีนำเสนอผลงาน</td><td>105</td><td>100–120</td><td>Demo Day สัมมนา แถลงข่าว · พื้นเรียบ เก้าอี้เลื่อนเก็บ ปรับเป็นพื้นที่สาธิตหุ่นยนต์ได้</td></tr>
+          <tr><td>พื้นที่ทำงานร่วมและบ่มเพาะ</td><td>44</td><td>20 โต๊ะ</td><td>ทีมสตาร์ทอัพประจำศูนย์ นักศึกษาผู้ก่อตั้ง เช่าโต๊ะรายเดือน</td></tr>
+          <tr><td>ห้องประชุมย่อย ×๓</td><td>42</td><td>6–8</td><td>จองใช้ได้ทั่วไป · ๑ ห้องเป็นห้องสัมภาษณ์/สื่อ</td></tr>
+          <tr><td>มุมสร้างชิ้นงาน</td><td>30</td><td>8</td><td>พิมพ์สามมิติ ประกอบวงจร ทำต้นแบบ · อยู่ระดับพื้นดินเพื่อการขนของและระบายอากาศ</td></tr>
+          <tr><td>ร้านกาแฟและพื้นที่พบปะ</td><td>20</td><td>16</td><td>พื้นที่พบปะไม่เป็นทางการ · พื้นที่พักของผู้เข้าอบรมชั้น ๒</td></tr>
+          <tr><td>ห้องโทรศัพท์และสมาธิเดี่ยว ×๔</td><td>13</td><td>1/ห้อง</td><td>คุยกับนักลงทุน สัมภาษณ์ออนไลน์ · ๑ ห้องรองรับผู้ใช้รถเข็น</td></tr>
+          <tr><td>ทางสัญจร ห้องน้ำผู้พิการ ที่เก็บของ</td><td>16</td><td>—</td><td>—</td></tr>
+        </tbody>
+        <tfoot><tr><td>รวมพื้นที่สุทธิ</td><td>340</td><td></td><td></td></tr></tfoot>
+      </table></div>
+    </div>
+
+    <div class="floor" id="f2" style="--c:var(--f2)">
+      <h3>ชั้น ๒ · โรงงานการเรียนรู้ <span class="tag">๕ ห้อง · ๓๔๐ ตร.ม.</span></h3>
+      <p class="concept">
+        ห้องปฏิบัติการคอมพิวเตอร์อเนกประสงค์ ๒ ห้อง ห้องละ ๖๐ ที่นั่ง เชื่อมด้วยผนังเลื่อนกันเสียง
+        เปิดรวมเป็น ๑๒๐ ที่นั่ง · แต่ละห้องปรับได้ ๔ รูปแบบ คือ คอมพิวเตอร์ · การสอบภายใต้การคุมสอบ ·
+        เครือข่าย · ไฟฟ้าและระบบอัตโนมัติ โดยเข็นชุดฝึกเคลื่อนที่เข้ามาจากห้องเก็บ
+      </p>
+      <div class="tblwrap"><table>
+        <thead><tr><th>ห้อง</th><th>ตร.ม.</th><th>ความจุ</th><th>หน้าที่หลัก</th></tr></thead>
+        <tbody>
+          <tr><td>ห้องปฏิบัติการคอมพิวเตอร์และฝึกอบรม A</td><td>140</td><td>60</td><td>รูปแบบตั้งต้น คอมพิวเตอร์ + เครือข่าย · ใช้เป็นห้องสอบ ๔๕ ที่นั่งเว้นระยะ</td></tr>
+          <tr><td>ห้องปฏิบัติการคอมพิวเตอร์และฝึกอบรม B</td><td>140</td><td>60</td><td>รูปแบบตั้งต้น ไฟฟ้า + ระบบอัตโนมัติ · เปิดผนังรวมกับห้อง A ได้</td></tr>
+          <tr><td>ห้องเก็บชุดฝึกเคลื่อนที่</td><td>22</td><td>~22 ชุด</td><td>ชุดฝึกเครือข่าย ๑๐ ชุด · ชุดฝึกไฟฟ้า/PLC ๑๕ ชุด · จอดและชาร์จระหว่างรอบอบรม</td></tr>
+          <tr><td>ห้องเตรียมการสอนและควบคุม</td><td>12</td><td>4</td><td>ฐานปฏิบัติงานผู้สอน · จุดควบคุมไฟฟ้าหลักและปุ่มหยุดฉุกเฉิน</td></tr>
+          <tr><td>ห้องเก็บวัสดุ</td><td>12</td><td>—</td><td>วัสดุสิ้นเปลืองของชั้นฝึกอบรม เบิกจ่ายตามบัตรควบคุมวัสดุ</td></tr>
+          <tr><td>ทางเดิน ล็อกเกอร์ ปล่องงานระบบ</td><td>14</td><td>—</td><td>เส้นทางหนีไฟ ๒ ทาง รองรับ ๑๒๐ คน</td></tr>
+        </tbody>
+        <tfoot><tr><td>รวมพื้นที่สุทธิ</td><td>340</td><td>120 เมื่อเปิดรวม</td><td></td></tr></tfoot>
+      </table></div>
+      <div class="note">
+        <b>ทำไมจึงเป็น ๒ ห้องปรับรูปแบบ ไม่ใช่ ๔ ห้องแยกถาวร</b> — ห้องเฉพาะทางถาวร ๔ ห้อง
+        (เครือข่าย ๒ + ไฟฟ้า ๒) ห้องละ ๖๐ ที่นั่ง รวมกับห้องคอมพิวเตอร์ ต้องใช้พื้นที่ราว
+        ๑,๑๓๐ ตร.ม. หรือ ๓.๓ ชั้น ขณะที่ชั้นนี้มี ๓๔๐ ตร.ม. ทางเลือกจริงจึงมีเพียง
+        “ห้องละ ๖๐ ที่นั่ง ๒ ห้อง” หรือ “ห้องละ ๒๐ ที่นั่ง ๖ ห้อง”
+        ข้อจำกัดที่ต้องระบุตามตรงคือ <b>สอนพร้อมกันได้ ๒ หลักสูตร ไม่ใช่ ๔</b>
+      </div>
+    </div>
+
+    <div class="floor" id="f3" style="--c:var(--f3)">
+      <h3>ชั้น ๓ · ห้องเครื่อง <span class="tag">๖ ห้อง · ๓๔๐ ตร.ม.</span></h3>
+      <p class="concept">
+        ชั้นที่มีข้อกำหนดทางเทคนิคสูงสุด รวมสภาพแวดล้อม ๔ แบบที่ขัดแย้งกันเอง — ห้องเครื่องที่ต้องเย็นและ
+        รับน้ำหนักมาก · งานหุ่นยนต์ที่ต้องการพื้นโล่งและความสูง · สตูดิโอที่ต้องการความเงียบ ·
+        และงานวิจัยบนเวิร์กสเตชัน จึงวางให้ด้านหนักและเสียงดังอยู่ปลายหนึ่ง ด้านเงียบอยู่อีกปลายหนึ่ง
+      </p>
+      <div class="tblwrap"><table>
+        <thead><tr><th>ห้อง</th><th>ตร.ม.</th><th>ความจุ</th><th>หน้าที่หลัก</th></tr></thead>
+        <tbody>
+          <tr><td>ห้องเครื่องคอมพิวเตอร์แม่ข่ายและ GPU</td><td>55</td><td>2</td><td>คลัสเตอร์ GPU · เครื่องแม่ข่าย HPC · จัดเก็บข้อมูล · แกนเครือข่ายและไฟร์วอลล์ · ตู้แร็ค ๖ ตู้ ออกแบบรองรับ ๖๐ kW</td></tr>
+          <tr><td>ห้องปฏิบัติการและสาธิตปัญญาประดิษฐ์</td><td>15</td><td>4</td><td>ห้องกระจกด้านทางเดิน แสดงสถานะคลัสเตอร์ การสาธิตเอเจนต์/LLM และแบบจำลองเสมือนของอาคาร</td></tr>
+          <tr><td>ห้องปฏิบัติการวิจัยปัญญาประดิษฐ์</td><td>60</td><td>16</td><td>ที่นั่งวิจัยและพัฒนาโมเดล · เวิร์กสเตชัน AI ๑๒ เครื่อง + เครื่องตั้งโต๊ะสมรรถนะสูง</td></tr>
+          <tr><td>สนามหุ่นยนต์และอากาศยานไร้คนขับ</td><td>100</td><td>16</td><td>สนามรวมผืนเดียว · ตาข่ายเลื่อนแบ่งเป็นปริมาตรบิน ~35 ตร.ม. และพื้นหุ่นยนต์ ~65 ตร.ม. · ความสูงโล่ง ≥ ๔ ม.</td></tr>
+          <tr><td>ชุดห้องสตูดิโอสื่อผสม</td><td>76</td><td>8</td><td>ห้องฉากเขียว ๓๖ · ห้องบันทึกเสียง ๘ · ห้องควบคุม/ตัดต่อ ๒๐ · ห้องพอดแคสต์ ๑๒</td></tr>
+          <tr><td>ห้องเก็บวัสดุ</td><td>12</td><td>—</td><td>อะไหล่หุ่นยนต์ เส้นใยพิมพ์ แบตเตอรี่ วัสดุงานสื่อ · ตู้กันไฟสำหรับ LiPo</td></tr>
+          <tr><td>ทางสัญจร ห้องกันอากาศ ปล่องงานระบบ</td><td>22</td><td>—</td><td>—</td></tr>
+        </tbody>
+        <tfoot><tr><td>รวมพื้นที่สุทธิ</td><td>340</td><td></td><td></td></tr></tfoot>
+      </table></div>
+      <div class="note">
+        <b>ข้อกำหนดที่ชี้ขาด</b> — ห้องเครื่องต้องรับน้ำหนัก ≥ ๗๕๐ กก./ตร.ม. (ตู้ 42U เต็มหนัก ๘๐๐–๑,๔๐๐ กก.)
+        ต้องมีลิฟต์ขนของ ≥ ๑,๖๐๐ กก. หรือช่องยกของภายนอก ระบบทำความเย็นความแม่นยำสูงแบบ N+1
+        และระบบดับเพลิงสารสะอาด (ห้ามใช้สปริงเกลอร์เหนือตู้)
+      </div>
+    </div>
+
+    <div class="floor" id="f4" style="--c:var(--f4)">
+      <h3>ชั้น ๔ · สะพานเชื่อม <span class="tag">๑๒ ห้อง · ๓๔๐ ตร.ม.</span></h3>
+      <p class="concept">
+        ภาพลักษณ์ทางวิชาชีพของศูนย์ และเป็นชั้นเดียวที่มีงานที่เป็นความลับ — สัญญา ทรัพย์สินทางปัญญา
+        การเจรจากับพันธมิตร งบประมาณ และงานบุคคล มีห้องประชุมระดับกรรมการเพื่อให้กรรมการสภาฯ
+        และพันธมิตรมาเยือนได้โดยไม่ต้องเดินผ่านห้องปฏิบัติการ
+      </p>
+      <div class="tblwrap"><table>
+        <thead><tr><th>ห้อง</th><th>ตร.ม.</th><th>ความจุ</th><th>หน้าที่หลัก</th></tr></thead>
+        <tbody>
+          <tr><td>ห้องผู้อำนวยการ · รองผู้อำนวยการ ×๒</td><td>44</td><td>3</td><td>ห้องทำงานผู้บริหารศูนย์พร้อมโต๊ะประชุมขนาดเล็ก</td></tr>
+          <tr><td>พื้นที่ทำงานส่วนกลาง</td><td>114</td><td>26–28</td><td>บุคลากรวิจัย วิศวกร ผู้จัดการโครงการ ช่างเทคนิค · เผื่อขยายถึง ~๓๕ คน</td></tr>
+          <tr><td>ห้องสมาธิเดี่ยว ×๔</td><td>12</td><td>1/ห้อง</td><td>โทรศัพท์ สัมภาษณ์ออนไลน์ งานที่ต้องใช้สมาธิ</td></tr>
+          <tr><td>ห้องประชุมผู้บริหาร</td><td>45</td><td>18–20</td><td>กรรมการสภาฯ คณะกรรมการอำนวยการ การเจรจาพันธมิตร พิธีลงนาม</td></tr>
+          <tr><td>ห้องประชุมย่อย ×๒</td><td>30</td><td>8</td><td>ประชุมโครงการประจำวัน</td></tr>
+          <tr><td>ห้องปฏิบัติการโครงการและที่ปรึกษา</td><td>20</td><td>8</td><td>งานลูกค้าและทรัพย์สินทางปัญญา · เอกสารลับอยู่ในห้องเท่านั้น</td></tr>
+          <tr><td>ห้องทำงานนักวิจัยรับเชิญและพันธมิตร</td><td>20</td><td>6</td><td>ศาสตราจารย์รับเชิญ บุคลากรภาคอุตสาหกรรม พันธมิตรต่างประเทศ</td></tr>
+          <tr><td>ธุรการ การเงินและพัสดุ · ห้องเก็บเอกสารสำคัญ</td><td>35</td><td>5–6</td><td>บริหารทุน งานพัสดุ ทะเบียนสินทรัพย์ · สัญญาและเอกสารสิทธิบัตร</td></tr>
+          <tr><td>ห้องพักบุคลากร</td><td>20</td><td>12</td><td>พื้นที่พัก เพื่อไม่ให้มีอาหารในห้องปฏิบัติการ</td></tr>
+        </tbody>
+        <tfoot><tr><td>รวมพื้นที่สุทธิ</td><td>340</td><td></td><td></td></tr></tfoot>
+      </table></div>
+    </div>
+  </div>
+</section>
+
+<section id="decide">
+  <div class="wrap">
+    <h2>ประเด็นที่ต้องตัดสินใจก่อน</h2>
+    <p class="sub">สามประเด็นนี้กำหนดว่าแผนนี้ก่อสร้างได้จริง มีเงินทำ และมีขนาดเท่าใด</p>
+    <div class="cards">
+      <div class="card">
+        <span class="id">D-01</span>
+        <h4>ห้องเครื่องตั้งอยู่ชั้นใด</h4>
+        <p>ชั้น ๓ ตามโจทย์ ต้องเสริมกำลังพื้นและมีลิฟต์ขนของขนาดใหญ่ · หรือย้ายลงชั้น ๑ ด้านหลัง
+           ซึ่งง่ายกว่าแต่กินพื้นที่หน้าอาคาร ~๕๕ ตร.ม.</p>
+        <p class="rec"><b>เสนอ:</b> ชั้น ๓ โดยมีเงื่อนไขว่าผลสำรวจโครงสร้างและลิฟต์ผ่าน
+           หากไม่ผ่านให้ถอยไปชั้น ๑ ซึ่งไม่กระทบสมรรถนะ</p>
+      </div>
+      <div class="card">
+        <span class="id">D-04</span>
+        <h4>แหล่งงบประมาณงานปรับปรุง</h4>
+        <p>คำขอตามแบบ MDES วงเงิน ๕๗๕ ล้านบาท เป็นงบครุภัณฑ์และค่าดำเนินงานเท่านั้น
+           ได้ตัดค่าปรับปรุงอาคารออกทั้งหมดแล้ว</p>
+        <p class="rec"><b>ต้องได้คำตอบก่อนเสนอสภาฯ</b> เพราะครุภัณฑ์ ๑๕๐ ล้านบาทใช้งานไม่ได้เลย
+           หากอาคารยังไม่พร้อม</p>
+      </div>
+      <div class="card">
+        <span class="id">D-06</span>
+        <h4>จำนวนห้องอบรม ๖๐ ที่นั่ง</h4>
+        <p>ชั้น ๒ รองรับได้จริง ๒ ห้อง หากต้องการห้องเฉพาะทางแยกถาวร ๔ ห้อง
+           ต้องใช้พื้นที่ ~๑,๑๓๐ ตร.ม. หรือ ๓.๓ ชั้น</p>
+        <p class="rec"><b>เสนอ:</b> ๒ ห้องอเนกประสงค์เปิดรวมเป็น ๑๒๐ ที่นั่ง ปรับหลักสูตรด้วยชุดฝึกเคลื่อนที่ ·
+           เลือกแบบห้องแยกถาวรเฉพาะกรณีได้พื้นที่เพิ่ม</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cost">
+  <div class="wrap">
+    <h2>ประมาณการค่าใช้จ่าย</h2>
+    <p class="sub">ระดับเบื้องต้น (Class D · ±๓๐ %) ตามราคาตลาดปี ๒๕๖๙ · ผู้ประมาณราคาต้องจัดทำตัวเลขชุดใหม่ก่อนเสนอของบประมาณ</p>
+    <div class="tblwrap"><table>
+      <thead><tr><th>รายการ</th><th>พื้นที่</th><th></th><th>วงเงิน</th></tr></thead>
+      <tbody>
+        <tr><td>ชั้น ๑ พื้นที่สาธารณะ</td><td>340</td><td></td><td>฿6.1 ล้าน</td></tr>
+        <tr><td>ชั้น ๒ ห้องฝึกอบรม รวมระบบไฟฟ้า ผนังเลื่อน และพื้นที่สนับสนุน</td><td>340</td><td></td><td>฿8.8 ล้าน</td></tr>
+        <tr><td>ชั้น ๓ ห้องเครื่อง (ไฟฟ้า ทำความเย็น ดับเพลิง ความปลอดภัย)</td><td>55</td><td></td><td>฿6.1 ล้าน</td></tr>
+        <tr><td>ชั้น ๓ ห้องปฏิบัติการ สตูดิโอ และห้องเก็บวัสดุ</td><td>263</td><td></td><td>฿8.3 ล้าน</td></tr>
+        <tr><td>ชั้น ๔ สำนักงาน</td><td>340</td><td></td><td>฿5.8 ล้าน</td></tr>
+        <tr><td>งานระดับอาคาร (ระบบหลัก อัคคีภัย ลิฟต์ ควบคุมการเข้าออก ป้าย)</td><td>—</td><td></td><td>฿10–14 ล้าน</td></tr>
+        <tr><td>งานเสริมกำลังโครงสร้าง</td><td>—</td><td></td><td>฿2–5 ล้าน</td></tr>
+        <tr><td>ค่าออกแบบ ควบคุมงาน และเงินสำรอง</td><td>—</td><td></td><td>฿11–14 ล้าน</td></tr>
+      </tbody>
+      <tfoot><tr><td>รวมวงเงินงานปรับปรุงอาคาร</td><td></td><td></td><td>≈ ฿58–68 ล้าน</td></tr></tfoot>
+    </table></div>
+    <div class="note">
+      <b>ครุภัณฑ์ที่ยังไม่มีในบัญชี ๑๕๐ ล้านบาท ประมาณ ฿35–53 ล้าน</b> — บัญชีปัจจุบัน ๔๖ รายการ
+      เน้นครุภัณฑ์วิจัย ยังไม่ครอบคลุมเครื่องคอมพิวเตอร์ผู้เรียน ๑๒๐ ที่นั่ง ชุดฝึกเครือข่าย ๑๐ ชุด
+      ชุดฝึกไฟฟ้า/PLC ๑๕ ชุด ครุภัณฑ์สตูดิโอ และระบบภาพเสียงเวทีนำเสนอ ·
+      ชุดฝึกเครือข่ายและชุดฝึกไฟฟ้าเป็นสองรายการที่มีโอกาสได้รับการสนับสนุนจากโครงการสถาบันการศึกษา
+      ของผู้ผลิตมากที่สุด และเป็นสองรายการที่หลักสูตรเปิดสอนไม่ได้หากขาด
+    </div>
+  </div>
+</section>
+
+<section id="plan">
+  <div class="wrap">
+    <h2>ลำดับงาน — ให้สอดคล้องกับการส่งมอบครุภัณฑ์ ปีงบประมาณ ๒๕๗๑</h2>
+    <p class="sub">ครุภัณฑ์ส่งมอบไตรมาส ๒–๔ งานปรับปรุงจึงต้องเดินนำหน้า และควรทยอยเปิดใช้เป็นระยะ</p>
+    <ol class="tl">
+      <li><span class="q">ก่อน ๒๕๗๑</span><div class="body"><b>สำรวจและออกแบบ</b><span>สำรวจโครงสร้าง ลิฟต์ กำลังไฟฟ้า · รังวัดจัดทำแบบ · เอกสารประกวดราคา</span></div></li>
+      <li><span class="q">ไตรมาส ๑</span><div class="body"><b>งานเตรียมระบบหลัก</b><span>เพิ่มกำลังไฟฟ้า · ปล่องงานระบบ · ปรับปรุงลิฟต์ · เสริมกำลังโครงสร้าง · งานกันซึม</span></div></li>
+      <li><span class="q">ไตรมาส ๑–๒</span><div class="body"><b>ห้องเครื่องและผนังชั้น ๓</b><span>ต้องเสร็จก่อนรับมอบครุภัณฑ์ไตรมาส ๒ เพราะคลัสเตอร์ GPU ไม่มีที่อื่นให้ติดตั้ง</span></div></li>
+      <li><span class="q">ไตรมาส ๒</span><div class="body"><b>ชั้นฝึกอบรม</b><span>ทำให้ศูนย์เริ่มจัดอบรมและสร้างรายได้ได้ภายในปีที่ ๑ — รายได้ที่เกิดเร็วที่สุดของโครงการ</span></div></li>
+      <li><span class="q">ไตรมาส ๒–๓</span><div class="body"><b>ชั้นสาธารณะ</b><span>รองรับพิธีเปิดและการต้อนรับนักลงทุนก่อนห้องปฏิบัติการแล้วเสร็จ</span></div></li>
+      <li><span class="q">ไตรมาส ๓</span><div class="body"><b>ห้องปฏิบัติการและสตูดิโอ</b><span>สอดคล้องกับกำหนดส่งมอบหุ่นยนต์</span></div></li>
+      <li><span class="q">ไตรมาส ๓–๔</span><div class="body"><b>สำนักงานและตรวจรับระบบ</b><span>ทดสอบความปลอดภัยเซลล์หุ่นยนต์และห้องไฟฟ้า · ส่งมอบก่อนเริ่มนับตัวชี้วัดปีที่ ๑</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>เอกสารฉบับเต็ม:</b> <code>space-plan-th.md</code> (ภาษาไทย) และ <code>space-plan.md</code>
+       (ภาษาอังกฤษ สำหรับสถาปนิก วิศวกร และผู้ประมาณราคา)</p>
+    <p>ตัวเลขพื้นที่ในหน้านี้เป็นพื้นที่ตามโปรแกรมการออกแบบ ไม่ใช่พื้นที่จากการรังวัดจริง ·
+       รหัสครุภัณฑ์อ้างอิงบัญชี ๔๖ รายการ วงเงิน ๑๕๐ ล้านบาท</p>
+    <p>สำนักวิชาเทคโนโลยีดิจิทัลประยุกต์ มหาวิทยาลัยแม่ฟ้าหลวง · ร่างเพื่อพิจารณา สิงหาคม ๒๕๖๙</p>
+  </div>
+</footer>
+
+</body>
+</html>
