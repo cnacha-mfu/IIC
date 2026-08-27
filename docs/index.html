@@ -78,6 +78,18 @@ h2{font-size:26px;margin-bottom:6px}
 .level .d{color:var(--muted);font-size:14.5px;margin-right:auto}
 .level .tier{font-size:12.5px;color:var(--muted);white-space:nowrap;
   border:1px solid var(--line);border-radius:100px;padding:2px 10px}
+.level{flex-wrap:wrap}
+.level .sub2{flex:0 0 100%;padding-left:58px;font-size:13.5px;color:var(--muted);
+  border-top:1px dashed var(--line);margin-top:9px;padding-top:8px;line-height:1.6}
+.level .sub2 b{color:var(--ink);font-weight:600}
+
+/* ---------- design rules ---------- */
+ol.rules{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:10px}
+ol.rules li{display:flex;gap:14px;background:var(--surface);border:1px solid var(--line);
+  border-radius:10px;padding:14px 18px;font-size:15.5px;color:var(--muted)}
+ol.rules .num{font-weight:700;color:var(--accent);min-width:18px}
+ol.rules b{color:var(--ink)}
+p.ruleslead{margin:30px 0 0;font-size:16px;color:var(--ink);font-weight:600}
 
 /* ---------- floor blocks ---------- */
 .floor{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
@@ -140,6 +152,7 @@ footer p{margin:.4em 0}
   body{font-size:16px}
   section{padding:40px 0}
   .level{flex-wrap:wrap;gap:8px}
+  .level .sub2{padding-left:0}
   .level .tier{order:3}
   ol.tl:before{display:none}
 }
@@ -203,23 +216,40 @@ footer p{margin:.4em 0}
         <span class="n">๑</span><span class="t">Launchpad</span>
         <span class="d">ทำงานร่วม · บ่มเพาะ · จัดแสดง · เวทีนำเสนอ</span>
         <span class="tier">ระดับ ๐ · สาธารณะ</span>
+        <span class="sub2"><b>บุคลิก</b> เปิดโล่ง มองเห็นได้ ปรับเปลี่ยนง่าย · <b>ผู้ใช้งานในวันปกติ</b> ผู้มาเยือน นักลงทุน ทีมสตาร์ทอัพ นักศึกษา</span>
       </div>
       <div class="level" style="--c:var(--f2)">
         <span class="n">๒</span><span class="t">Academy</span>
         <span class="d">ห้องปฏิบัติการคอมพิวเตอร์อเนกประสงค์ ๖๐/๑๒๐ ที่นั่ง</span>
         <span class="tier">ระดับ ๑ · ผู้ลงทะเบียน</span>
+        <span class="sub2"><b>บุคลิก</b> ใช้งานหนัก หมุนเวียนเร็ว ปรับรูปแบบได้ · <b>ผู้ใช้งานในวันปกติ</b> ผู้เข้าอบรม นักศึกษา หลักสูตรองค์กร ผู้สอน · งานที่ใช้ไฟฟ้าต้องมีผู้ควบคุม</span>
       </div>
       <div class="level" style="--c:var(--f3)">
         <span class="n">๓</span><span class="t">Engine</span>
         <span class="d">ห้องเครื่อง GPU · วิจัย AI · สนามหุ่นยนต์ · สตูดิโอ</span>
         <span class="tier">ระดับ ๒–๓ · สังกัดโครงการ</span>
+        <span class="sub2"><b>บุคลิก</b> เงียบ ควบคุม เชิงเทคนิค · <b>ผู้ใช้งานในวันปกติ</b> นักวิจัย วิศวกร นักศึกษาบัณฑิตศึกษา</span>
       </div>
       <div class="level" style="--c:var(--f4)">
         <span class="n">๔</span><span class="t">Bridge</span>
         <span class="d">สำนักงาน · ผู้บริหาร · งานที่ปรึกษาและพันธมิตร</span>
         <span class="tier">ระดับ ๒ · เจ้าหน้าที่</span>
+        <span class="sub2"><b>บุคลิก</b> สงบ เป็นทางการ เป็นความลับ · <b>ผู้ใช้งานในวันปกติ</b> ผู้อำนวยการ ธุรการ ทีมโครงการ พันธมิตร · ผู้มาติดต่อต้องมีผู้นำทาง</span>
       </div>
     </div>
+
+    <p class="ruleslead">หลักการ ๓ ข้อที่ตามมา และควรคงไว้แม้จะมีการลดทอนงบประมาณ</p>
+    <ol class="rules">
+      <li><span class="num">๑</span><span><b>แยกเสียงรบกวนและความลับตามแนวตั้ง</b> — เสียงจากพื้นที่สาธารณะ
+        หยุดที่เพดานชั้น ๑ ส่วนการเจรจาที่เป็นความลับ (ทรัพย์สินทางปัญญา สัญญา การเจรจากับพันธมิตร)
+        เริ่มที่ชั้น ๔</span></li>
+      <li><span class="num">๒</span><span><b>เส้นทางเยี่ยมชมเส้นเดียว</b> — ผู้มาเยือนเดินตามเส้นทาง
+        โถงต้อนรับ → มุมสาธิตในพื้นที่ทำงานร่วม → เวทีนำเสนอ และอาจชมมุมสาธิต AI กับสนามหุ่นยนต์
+        ที่ชั้น ๓ ผ่านกระจก โดยไม่ต้องเข้าไปในห้องปฏิบัติการ</span></li>
+      <li><span class="num">๓</span><span><b>ห้องปฏิบัติการต้อง “มองเห็นได้” แต่ “เข้าไม่ได้”</b> —
+        การใช้กระจกภายใน พร้อมฟิล์มปรับความทึบในจุดที่มีข้อตกลงรักษาความลับ เป็นวิธีที่ประหยัดที่สุด
+        ที่ทำให้ศูนย์วิจัยดูมีชีวิตในสายตาผู้ให้ทุน</span></li>
+    </ol>
 
     <div class="note">
       <b>ตำแหน่งของศูนย์อยู่ที่ชั้นการประยุกต์ใช้</b> ของ Physical AI Stack ตามแนวคิด
