@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 80 1720 340" width="1720" height="340" role="img" aria-label="MFU-ARIC logo">
+  <title>MFU-ARIC — AI &amp; Robotics Innovation Center, Mae Fah Luang University</title>
+  <defs>
+    <linearGradient id="range" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C8102E"/>
+      <stop offset="1" stop-color="#7A0C1E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- mark -->
+  <g>
+    <circle cx="418" cy="118" r="30" fill="#E4B04A"/>
+    <path d="M56 400 L168 192 L244 282 L320 140 L456 400 Z" fill="url(#range)"/>
+    <g stroke="#F3D48A" stroke-width="5" stroke-linecap="round" fill="none">
+      <path d="M168 192 L244 282 L320 140"/>
+      <path d="M320 140 L300 236 L244 282"/>
+      <path d="M300 236 L352 320"/>
+      <path d="M244 282 L232 352 L352 320"/>
+      <path d="M168 192 L232 352" opacity="0.6"/>
+    </g>
+    <g fill="#E4B04A">
+      <circle cx="300" cy="236" r="8"/>
+      <circle cx="232" cy="352" r="8"/>
+      <circle cx="352" cy="320" r="8"/>
+    </g>
+    <g fill="#FFFFFF" stroke="#E4B04A" stroke-width="5">
+      <circle cx="168" cy="192" r="12"/>
+      <circle cx="244" cy="282" r="10"/>
+      <circle cx="320" cy="140" r="13"/>
+    </g>
+    <path d="M40 400 H472" stroke="#7A0C1E" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <!-- divider -->
+  <path d="M528 150 V400" stroke="#D9D4CC" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- wordmark -->
+  <g font-family="Inter, 'Segoe UI', Helvetica, Arial, 'Noto Sans', sans-serif">
+    <text x="580" y="278" font-size="196" font-weight="800" letter-spacing="10" fill="#7A0C1E">ARIC</text>
+    <text x="586" y="340" font-size="42" font-weight="600" letter-spacing="5" fill="#3A3A3A">MFU AI &amp; ROBOTICS INNOVATION CENTER</text>
+  </g>
+</svg>

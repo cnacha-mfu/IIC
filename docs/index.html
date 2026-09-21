@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MFU-ARIC · แผนการใช้พื้นที่อาคาร</title>
 <meta name="description" content="แผนการใช้พื้นที่และปรับปรุงอาคาร ๔ ชั้น ศูนย์นวัตกรรมด้านปัญญาประดิษฐ์และหุ่นยนต์ มหาวิทยาลัยแม่ฟ้าหลวง">
+<link rel="icon" type="image/svg+xml" href="aric_logo_mark.svg">
+<link rel="apple-touch-icon" href="aric_avatar.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -38,6 +40,16 @@ a{color:var(--accent)}
 header.hero{padding:56px 0 40px;border-bottom:1px solid var(--line)}
 .eyebrow{font-size:14px;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:12px}
 h1{font-size:clamp(27px,4.3vw,43px);letter-spacing:-.01em}
+
+/* ---------- logo ---------- */
+.brand{display:block;margin:0 0 28px}
+.brand img{display:block;height:auto;width:min(400px,100%)}
+.brand .dark{display:none}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .brand .light{display:none}
+  :root:not([data-theme="light"]) .brand .dark{display:block}
+}
+footer .mark{width:56px;height:56px;margin-bottom:14px;opacity:.9}
 
 /* ---------- full building photo ---------- */
 figure.shot{margin:30px 0 0}
@@ -165,10 +177,14 @@ footer p{margin:.4em 0}
 }
 </style>
 </head>
-<body>
+<body id="top">
 
 <header class="hero">
   <div class="wrap">
+    <a class="brand" href="#top" aria-label="MFU-ARIC">
+      <img class="light" src="aric_logo_horizontal_compact.svg" alt="MFU-ARIC — ศูนย์นวัตกรรมด้านปัญญาประดิษฐ์และหุ่นยนต์ มหาวิทยาลัยแม่ฟ้าหลวง" width="1720" height="340">
+      <img class="dark" src="aric_logo_horizontal_reverse_compact.svg" alt="" width="1720" height="340" aria-hidden="true">
+    </a>
     <div class="eyebrow">มหาวิทยาลัยแม่ฟ้าหลวง · สำนักวิชาเทคโนโลยีดิจิทัลประยุกต์</div>
     <h1>แผนการใช้พื้นที่และปรับปรุงอาคาร<br>ศูนย์นวัตกรรมด้านปัญญาประดิษฐ์และหุ่นยนต์</h1>
     <p class="lede">
@@ -388,6 +404,7 @@ footer p{margin:.4em 0}
 
 <footer>
   <div class="wrap">
+    <img class="mark" src="aric_logo_mark.svg" alt="MFU-ARIC" width="56" height="56">
     <p><b>เอกสารฉบับเต็ม:</b> <code>space-plan-th.md</code> (ภาษาไทย) และ <code>space-plan.md</code>
        (ภาษาอังกฤษ สำหรับสถาปนิก วิศวกร และผู้ประมาณราคา)</p>
     <p>ตัวเลขพื้นที่ในหน้านี้เป็นพื้นที่ตามโปรแกรมการออกแบบ ไม่ใช่พื้นที่จากการรังวัดจริง ·
