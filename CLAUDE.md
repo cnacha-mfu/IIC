@@ -82,6 +82,26 @@ different tone, and different source files.
    `annexes/annex_khor_installation.md` still follow the older DIC/S7A layout and contradict
    this brief** — see gotcha 8.
 
+## Published GitHub Pages sites (all under github.com/cnacha-mfu)
+
+| Site | Repo | Source in this workspace |
+|---|---|---|
+| https://cnacha-mfu.github.io/IIC/ — space-plan page (track 4) | `IIC` (this repo), served from `docs/` | `docs/index.html` |
+| https://cnacha-mfu.github.io/aric-plan-deck/ — concept/phasing deck (track 3) | `aric-plan-deck` | none — presentation of `phasing.md` |
+| https://cnacha-mfu.github.io/aric-council-deck/ — Council briefing deck | `aric-council-deck` | none |
+| https://cnacha-mfu.github.io/aric-partner-deck/ — partnership invitation deck | `aric-partner-deck` | none |
+| https://cnacha-mfu.github.io/aric-concept-deck/ — industry-facing concept deck | `aric-concept-deck` | none |
+
+The four deck repos are **not** checked out in this workspace; clone them to a temp folder
+when they need editing (each is a single `index.html` with base64-embedded photos, CRLF line
+endings). All five carry the ARIC logo since 2026-09-21: the page uses the compact horizontal
+lockup, the decks show `aric_logo_mark.svg` beside the "ARIC" wordmark on the cover (reversed
+palette on the three photo-background covers) and as favicon. Logo masters and the
+`make_logo_variants.py` / `render_logo.py` pair live in `figures/logo/` and `scripts/`;
+`figures/logo/logo-concept.md` explains the design. This local git checkout had fallen 27
+commits behind origin before 2026-09-21 (edits were being committed from elsewhere) — run
+`git fetch` and compare before assuming the working tree is what is published.
+
 ## Active working plan
 
 **`PLAN_sections_5-10.md`** is the authoring plan for ข้อ ๕–๑๐. Read it before starting
