@@ -14,14 +14,14 @@
 :root{
   --bg:#f7f6f3; --surface:#ffffff; --ink:#1b1c1e; --muted:#5d6167; --line:#e2e0da;
   --accent:#0d3b66; --accent-soft:#e8eff7;
-  --f1:#c9713c; --f2:#3f8f6f; --f3:#6b5b95; --f4:#0d3b66;
+  --f1:#2a2a2a; --f2:#3f8f6f; --f3:#6b5b95; --f4:#0d3b66;
   --radius:14px;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     --bg:#141517; --surface:#1c1e21; --ink:#eceef0; --muted:#a2a8b0; --line:#2e3237;
     --accent:#7fb0e0; --accent-soft:#1e2a38;
-    --f1:#e0925c; --f2:#5fb894; --f3:#a292c9; --f4:#7fb0e0;
+    --f1:#eceef0; --f2:#5fb894; --f3:#a292c9; --f4:#7fb0e0;
   }
 }
 *{box-sizing:border-box}
@@ -161,6 +161,16 @@ tfoot td{font-weight:700;border-top:2px solid var(--line);border-bottom:none;pad
 .theme .hex{font-size:12.5px;color:var(--muted);margin-bottom:10px}
 .matlbl{font-size:13px;font-weight:600;color:var(--muted);margin:2px 0 4px}
 
+/* ---------- Floor 1 = all floor colours together ---------- */
+.multi{position:relative}
+.level.multi{border-right-color:transparent}
+.level.multi::after{content:"";position:absolute;top:-1px;bottom:-1px;right:-6px;width:6px;border-radius:0 10px 10px 0;background:linear-gradient(180deg,#C9713C 0 25%,#3F8F6F 25% 50%,#6B5B95 50% 75%,#0D3B66 75% 100%)}
+.floor.multi{border-top-color:transparent}
+.floor.multi::before{content:"";position:absolute;left:-1px;right:-1px;top:-4px;height:4px;border-radius:var(--radius) var(--radius) 0 0;background:linear-gradient(90deg,#C9713C 0 25%,#3F8F6F 25% 50%,#6B5B95 50% 75%,#0D3B66 75% 100%)}
+.floor.multi .thm{background:linear-gradient(90deg,#C9713C 0 25%,#3F8F6F 25% 50%,#6B5B95 50% 75%,#0D3B66 75% 100%)}
+.dots4{display:inline-flex;gap:3px;vertical-align:1px;margin-left:4px}
+.dots4 i{width:9px;height:9px;border-radius:50%;display:inline-block}
+
 /* ---------- decisions ---------- */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
@@ -253,8 +263,8 @@ footer p{margin:.4em 0}
     </p>
 
     <div class="stack">
-      <div class="level" style="--c:var(--f1)">
-        <span class="n">๑</span><span class="t">Launchpad · <a href="#themes" style="color:var(--c);text-decoration:none">Base Camp</a></span>
+      <div class="level multi" style="--c:var(--f1)">
+        <span class="n">๑</span><span class="t">Launchpad · <a href="#themes" style="color:var(--c);text-decoration:none">Base Camp</a><span class="dots4"><i style="background:#C9713C"></i><i style="background:#3F8F6F"></i><i style="background:#6B5B95"></i><i style="background:#0D3B66"></i></span></span>
         <span class="d">ทำงานร่วม · บ่มเพาะ · จัดแสดง · เวทีนำเสนอ</span>
         <span class="tier">ระดับ ๐ · สาธารณะ</span>
         <span class="sub2"><b>บุคลิก</b> เปิดโล่ง มองเห็นได้ ปรับเปลี่ยนง่าย · <b>ผู้ใช้งานในวันปกติ</b> ผู้มาเยือน นักลงทุน ทีมสตาร์ทอัพ นักศึกษา</span>
@@ -322,12 +332,12 @@ footer p{margin:.4em 0}
 
     <div class="themes">
       <div class="theme" style="--c:var(--f1)">
-        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#C9713C;flex:2"></i><i style="background:#F2C6A6;flex:2"></i></div>
+        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#C9713C;flex:1"></i><i style="background:#3F8F6F;flex:1"></i><i style="background:#6B5B95;flex:1"></i><i style="background:#0D3B66;flex:1"></i></div>
         <div class="tx">
           <div class="fl">ชั้น ๑ · Launchpad</div>
           <h3>Base Camp</h3>
           <p class="mood">ชั้นบ่มเพาะระดับโลก ฐานที่ทุกทีมเตรียมตัวและออกเดินทาง</p>
-          <div class="hex">สีประจำชั้น ส้ม <code>#C9713C</code> · พีช <code>#F2C6A6</code></div>
+          <div class="hex">สีประจำชั้น <b>รวมทุกสีของอาคาร</b> — ส้ม <code>#C9713C</code> · เขียว <code>#3F8F6F</code> · ม่วง <code>#6B5B95</code> · น้ำเงิน <code>#0D3B66</code> · ชั้น ๑ เป็นประตูหน้าที่แนะนำทั้งอาคาร: ป้ายบอกชั้นแถบสี ที่นั่งคละสี และแท่นนิทรรศการใช้สีของชั้นที่สร้างผลงาน</div>
           <div class="matlbl">ของตกแต่งและจอแสดงผล</div>
           <ul><li><b>โถงพร้อมจัดนิทรรศการ</b> ระบบจัดแสดงแบบโมดูล รางไฟส่อง รางแขวน ผนังเคลื่อนที่ และแท่นจัดแสดง สำหรับนิทรรศการหมุนเวียน — ผลงานนักศึกษา สตาร์ทอัพ พันธมิตร และงาน AI/หุ่นยนต์</li><li><b>มุมมรดกคอมพิวเตอร์</b> เครื่องแม่ข่ายและคอมพิวเตอร์ที่ปลดระวางของมหาวิทยาลัย จัดแสดงในตู้กระจกตามมุมของชั้น พร้อมเรื่องเล่าว่าเคยทำงานอะไร — จากห้องเซิร์ฟเวอร์ห้องแรกถึงคลัสเตอร์ GPU ชั้นบน</li><li><b>Traction Board</b> จอ LED แสดงผลสด — ทีม MVP ลูกค้าที่จ่ายเงิน เงินลงทุน และนับถอยหลังสู่ Demo Day</li><li><b>Wall of Firsts</b> แผ่นป้ายของทุกทีมเมื่อได้ลูกค้ารายแรกและเงินลงทุนครั้งแรก</li><li><b>เวที Demo Day</b> พร้อมถ่ายทอดสด จอ LED และไฟเวที</li><li><b>แท่นจัดแสดง “Shipped”</b> ต้นแบบที่ใช้งานได้จริง พร้อม QR ให้นักลงทุน</li><li><b>Pitch Booth</b> บูธเก็บเสียงสำหรับวิดีโอนำเสนอและประชุมนักลงทุน</li><li><b>บาร์กาแฟและชาพิเศษ</b> ในคาเฟ่ชั้น ๑ แหล่งท้องถิ่น มาตรฐานสากล — กาแฟและชาดอยตุง / ดอยแม่สลอง ต้อนรับพันธมิตรและผู้มาเยือนตั้งแต่ทางเข้า</li><li><b>พื้นที่สีเขียว</b> ผนังต้นไม้มีชีวิตที่ทางเข้า และกระถางใหญ่คั่นโซนทีม</li></ul>
           <div class="chips"><span>พื้น: คอนกรีตขัดมัน</span></div>
@@ -398,7 +408,7 @@ footer p{margin:.4em 0}
       </ul>
     </div>
 
-    <div class="floor" style="--c:var(--f1)">
+    <div class="floor multi" style="--c:var(--f1)">
       <h3>ชั้น ๑ · Launchpad <span class="tag">๙ ห้อง</span> <span class="thm">ธีม Base Camp</span></h3>
       <p class="concept">
         ชั้นล่างที่คนแปลกหน้าเดินเข้ามาได้ ทุกพื้นที่ออกแบบให้เข้าได้โดยไม่ต้องขออนุญาต
