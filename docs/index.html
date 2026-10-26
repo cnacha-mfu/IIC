@@ -14,14 +14,14 @@
 :root{
   --bg:#f7f6f3; --surface:#ffffff; --ink:#1b1c1e; --muted:#5d6167; --line:#e2e0da;
   --accent:#0d3b66; --accent-soft:#e8eff7;
-  --f1:#c9713c; --f2:#3f8f6f; --f3:#0d3b66; --f4:#6b5b95;
+  --f1:#c9713c; --f2:#3f8f6f; --f3:#6b5b95; --f4:#0d3b66;
   --radius:14px;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     --bg:#141517; --surface:#1c1e21; --ink:#eceef0; --muted:#a2a8b0; --line:#2e3237;
     --accent:#7fb0e0; --accent-soft:#1e2a38;
-    --f1:#e0925c; --f2:#5fb894; --f3:#7fb0e0; --f4:#a292c9;
+    --f1:#e0925c; --f2:#5fb894; --f3:#a292c9; --f4:#7fb0e0;
   }
 }
 *{box-sizing:border-box}
@@ -322,12 +322,12 @@ footer p{margin:.4em 0}
 
     <div class="themes">
       <div class="theme" style="--c:var(--f1)">
-        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#C9713C;flex:2"></i><i style="background:#6A9A3F;flex:2"></i></div>
+        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#C9713C;flex:2"></i><i style="background:#F2C6A6;flex:2"></i></div>
         <div class="tx">
           <div class="fl">ชั้น ๑ · Launchpad</div>
           <h3>Base Camp</h3>
           <p class="mood">ชั้นบ่มเพาะระดับโลก ฐานที่ทุกทีมเตรียมตัวและออกเดินทาง</p>
-          <div class="hex">สีประจำชั้น ส้ม <code>#C9713C</code> · สีเขียวจากต้นไม้จริง</div>
+          <div class="hex">สีประจำชั้น ส้ม <code>#C9713C</code> · พีช <code>#F2C6A6</code></div>
           <div class="matlbl">ของตกแต่งและจอแสดงผล</div>
           <ul><li><b>Traction Board</b> จอ LED แสดงผลสด — ทีม MVP ลูกค้าที่จ่ายเงิน เงินลงทุน และนับถอยหลังสู่ Demo Day</li><li><b>Wall of Firsts</b> แผ่นป้ายของทุกทีมเมื่อได้ลูกค้ารายแรกและเงินลงทุนครั้งแรก</li><li><b>เวที Demo Day</b> พร้อมถ่ายทอดสด จอ LED และไฟเวที</li><li><b>แท่นจัดแสดง “Shipped”</b> ต้นแบบที่ใช้งานได้จริง พร้อม QR ให้นักลงทุน</li><li><b>Pitch Booth</b> บูธเก็บเสียงสำหรับวิดีโอนำเสนอและประชุมนักลงทุน</li><li><b>บาร์กาแฟและชาพิเศษ</b> ในคาเฟ่ชั้น ๑ แหล่งท้องถิ่น มาตรฐานสากล — กาแฟและชาดอยตุง / ดอยแม่สลอง ต้อนรับพันธมิตรและผู้มาเยือนตั้งแต่ทางเข้า</li><li><b>พื้นที่สีเขียว</b> ผนังต้นไม้มีชีวิตที่ทางเข้า และกระถางใหญ่คั่นโซนทีม</li></ul>
           <div class="chips"><span>พื้น: คอนกรีตขัดมัน</span></div>
@@ -346,24 +346,24 @@ footer p{margin:.4em 0}
         </div>
       </div>
       <div class="theme" style="--c:var(--f3)">
-        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#0D3B66;flex:2"></i><i style="background:#3FC1C9;flex:1"></i></div>
+        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#6B5B95;flex:2"></i><i style="background:#C9C0E0;flex:1"></i></div>
         <div class="tx">
           <div class="fl">ชั้น ๓ · Engine</div>
           <h3>High Camp</h3>
           <p class="mood">ชั้นวิจัย เงียบ เชิงเทคนิค และมองเห็นงานได้ผ่านกระจก</p>
-          <div class="hex">สีประจำชั้น น้ำเงินเข้ม <code>#0D3B66</code> · ฟ้า <code>#3FC1C9</code> เป็นแสงเท่านั้น</div>
+          <div class="hex">สีประจำชั้น ม่วง <code>#6B5B95</code> · ลาเวนเดอร์ <code>#C9C0E0</code></div>
           <div class="matlbl">ของตกแต่งและจอแสดงผล</div>
-          <ul><li><b>Live Compute Wall</b> จอแสดงภาระงาน GPU งานที่กำลังรัน และโมเดลที่กำลังเทรน เชื่อมกับเส้นไฟ LED สีฟ้าบนฝ้าทางเดินที่สว่างขึ้นเมื่อ GPU ทำงานหนัก</li><li><b>จอ “Now Building”</b> ที่หน้าห้องปฏิบัติการแต่ละห้อง หลังกระจกฝ้าไล่ระดับ</li><li><b>ระเบียงชมสนามหุ่นยนต์</b> หน้าต่างกระจกบานใหญ่ พร้อมจอซ้อนภาพสิ่งที่หุ่นยนต์มองเห็น</li><li><b>Patents & Papers Wall</b> กรอบสิทธิบัตร ผลงานตีพิมพ์ และรางวัล ปรับปรุงทุกปี</li></ul>
+          <ul><li><b>Live Compute Wall</b> จอแสดงภาระงาน GPU งานที่กำลังรัน และโมเดลที่กำลังเทรน เชื่อมกับเส้นไฟ LED สีลาเวนเดอร์บนฝ้าทางเดินที่สว่างขึ้นเมื่อ GPU ทำงานหนัก</li><li><b>จอ “Now Building”</b> ที่หน้าห้องปฏิบัติการแต่ละห้อง หลังกระจกฝ้าไล่ระดับ</li><li><b>ระเบียงชมสนามหุ่นยนต์</b> หน้าต่างกระจกบานใหญ่ พร้อมจอซ้อนภาพสิ่งที่หุ่นยนต์มองเห็น</li><li><b>Patents & Papers Wall</b> กรอบสิทธิบัตร ผลงานตีพิมพ์ และรางวัล ปรับปรุงทุกปี</li></ul>
           <div class="chips"><span>พื้น: ไวนิลกันไฟฟ้าสถิตสีเทา · อีพ็อกซีในสนาม</span></div>
         </div>
       </div>
       <div class="theme" style="--c:var(--f4)">
-        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#6B5B95;flex:2"></i><i style="background:#A9C5B4;flex:1"></i></div>
+        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#0D3B66;flex:2"></i><i style="background:#8DB3D9;flex:1"></i></div>
         <div class="tx">
           <div class="fl">ชั้น ๔ · Bridge</div>
           <h3>Summit</h3>
           <p class="mood">ชั้นผู้บริหารและพันธมิตร สงบ โปร่ง พร้อมรับพันธมิตรนานาชาติ</p>
-          <div class="hex">สีประจำชั้น ม่วง <code>#6B5B95</code> · เขียวเซจ <code>#A9C5B4</code></div>
+          <div class="hex">สีประจำชั้น น้ำเงิน <code>#0D3B66</code> · ฟ้า <code>#8DB3D9</code></div>
           <div class="matlbl">ของตกแต่งและจอแสดงผล</div>
           <ul><li><b>Partner Map</b> แผนที่ดิจิทัลขนาดใหญ่ แสดงพันธมิตร นักลงทุน และบริษัทในพอร์ตทั้งภาคเหนือ อนุภูมิภาคลุ่มน้ำโขง และทั่วโลก</li><li><b>Portfolio Wall</b> บริษัทที่เกิดจาก ARIC พร้อมโลโก้ ผู้ก่อตั้ง และความสำเร็จสำคัญ</li><li><b>โต๊ะลงนามพร้อมฉากหลังสื่อ</b> สำหรับพิธีลงนามความร่วมมือและถ่ายภาพ</li><li><b>งานศิลปะและต้นไม้</b> ผลงานศิลปินภาคเหนือหมุนเวียน และต้นไม้ริมหน้าต่าง</li></ul>
           <div class="chips"><span>พื้น: พรมแผ่นซับเสียงสีเทา</span></div>
