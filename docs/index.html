@@ -138,7 +138,7 @@ tfoot td{font-weight:700;border-top:2px solid var(--line);border-bottom:none;pad
 .note b{color:var(--accent)}
 
 /* ---------- floor themes ---------- */
-.palette{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:22px 0 30px}
+.palette{display:grid;grid-template-columns:repeat(auto-fit,minmax(124px,1fr));gap:10px;margin:22px 0 30px}
 .sw{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:14px}
 .sw i{display:block;height:46px;background:var(--s);border-bottom:1px solid var(--line)}
 .sw div{padding:8px 12px}
@@ -159,6 +159,7 @@ tfoot td{font-weight:700;border-top:2px solid var(--line);border-bottom:none;pad
 .theme .chips{display:flex;flex-wrap:wrap;gap:6px}
 .theme .chips span{font-size:13px;border:1px solid var(--line);border-radius:100px;padding:1px 10px;color:var(--muted)}
 .theme .hex{font-size:12.5px;color:var(--muted);margin-bottom:10px}
+.matlbl{font-size:13px;font-weight:600;color:var(--muted);margin:2px 0 4px}
 
 /* ---------- decisions ---------- */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
@@ -215,7 +216,7 @@ footer p{margin:.4em 0}
       รายการห้อง หน้าที่ใช้สอย และความจุผู้ใช้งาน · ขนาดพื้นที่จริงรอผลการรังวัดอาคาร
       จึงยังไม่ระบุไว้ในเอกสารฉบับนี้
     </p>
-    <p class="meta">ฉบับย่อ v1.5 · ตุลาคม ๒๕๖๙ · ร่างเพื่อพิจารณา <span class="badge">เอกสารภายใน</span></p>
+    <p class="meta">ฉบับย่อ v1.6 · ตุลาคม ๒๕๖๙ · ร่างเพื่อพิจารณา <span class="badge">เอกสารภายใน</span></p>
 
     <figure class="shot">
       <img src="building.jpg" alt="อาคารมหาวิทยาลัยแม่ฟ้าหลวง จังหวัดเชียงราย" width="1536" height="1024">
@@ -234,7 +235,7 @@ footer p{margin:.4em 0}
 <nav class="floors">
   <div class="wrap">
     <a href="#concept">แนวคิด</a>
-    <a href="#themes">ธีมรายชั้น</a>
+    <a href="#themes">แนวคิดภายใน</a>
     <a href="#f1">ชั้น ๑ Launchpad</a>
     <a href="#f2">ชั้น ๒ Academy</a>
     <a href="#f3">ชั้น ๓ Engine</a>
@@ -302,71 +303,73 @@ footer p{margin:.4em 0}
 
 <section id="themes">
   <div class="wrap">
-    <h2>ธีม สี และวัสดุรายชั้น — “ขึ้นดอย”</h2>
-    <p class="sub">โลโก้ ARIC คือแนวดอยเชียงราย อาคารจึงเล่าการไต่ขึ้นดอยทีละชั้น จาก <b>กาดที่ตีนดอย</b>
-      ผ่าน <b>ไร่ขั้นบันได</b> เข้าสู่ <b>ป่าเมฆ</b> ถึง <b>ศาลาชาบนยอดดอย</b> ซึ่งสื่อถึงดอยตุงและดอยแม่สลอง
-      มรดกของแม่ฟ้าหลวง ธีมของแต่ละชั้นสะท้อนหน้าที่ของชั้นนั้น</p>
+    <h2>แนวคิดภายใน — ทันสมัยทุกชั้น เล่าเรื่องผ่านของตกแต่ง</h2>
+    <p class="sub">ทั้ง ๔ ชั้นใช้ภายในแบบร่วมสมัยชุดเดียวกัน — ผนังขาวอุ่น ไม้สีอ่อน โลหะดำ กระจก พื้นสีกลาง —
+      ไม่มีงานผิวถาวรตามธีม · เรื่อง <b>“ขึ้นดอย”</b> จากโลโก้ ARIC (กาด → ไร่ขั้นบันได → ป่าเมฆ → ศาลาชาบนยอดดอย)
+      แสดงผ่าน <b>สีประจำชั้น</b> สำหรับป้ายนำทาง และ <b>ของตกแต่งลูกเล่น ๔–๕ ชิ้นต่อชั้น</b> ที่ถอดเปลี่ยนได้เท่านั้น</p>
 
-    <p class="ruleslead" style="margin-top:0">ชุดสีพื้นฐานทั้งอาคาร</p>
+    <p class="ruleslead" style="margin-top:0">สีและวัสดุพื้นฐาน — เหมือนกันทุกชั้น</p>
     <div class="palette">
-      <div class="sw" style="--s:#FAF6EE"><i></i><div><b>ครีม ARIC</b><code>#FAF6EE</code> · ผนังและฝ้า</div></div>
-      <div class="sw" style="--s:#B8B2A7"><i></i><div><b>เทาคอนกรีต</b><code>#B8B2A7</code> · พื้น เสา บันได</div></div>
-      <div class="sw" style="--s:#9C6B3C"><i></i><div><b>ไม้สัก</b><code>#9C6B3C</code> · ราวจับ เคาน์เตอร์</div></div>
-      <div class="sw" style="--s:#7A1C1C"><i></i><div><b>แดง ARIC</b><code>#7A1C1C</code> · โลโก้และป้ายหลักเท่านั้น</div></div>
-      <div class="sw" style="--s:#E4B04A"><i></i><div><b>ทอง “เส้น ARIC”</b><code>#E4B04A</code> · เส้นนำทางไต่จากชั้น ๑ ถึง ๔</div></div>
+      <div class="sw" style="--s:#F7F6F3"><i></i><div><b>ขาวอุ่น</b><code>#F7F6F3</code> · ผนังและฝ้า</div></div>
+      <div class="sw" style="--s:#DAD8D3"><i></i><div><b>เทาอ่อน</b><code>#DAD8D3</code> · ผนังกั้น แผงซับเสียง เบาะ</div></div>
+      <div class="sw" style="--s:#B8B2A7"><i></i><div><b>พื้นเทา</b><code>#B8B2A7</code> · คอนกรีตขัดมัน / พื้นยืดหยุ่น</div></div>
+      <div class="sw" style="--s:#C9A57A"><i></i><div><b>ไม้สีอ่อน</b><code>#C9A57A</code> · โต๊ะ ราวจับ บานประตู</div></div>
+      <div class="sw" style="--s:#2A2A2A"><i></i><div><b>เหล็กดำด้าน</b><code>#2A2A2A</code> · โครงเฟอร์นิเจอร์ โคมไฟ</div></div>
+      <div class="sw" style="--s:#7A1C1C"><i></i><div><b>แดง ARIC</b><code>#7A1C1C</code> · โลโก้และป้ายหลัก</div></div>
+      <div class="sw" style="--s:#E4B04A"><i></i><div><b>ทอง “เส้น ARIC”</b><code>#E4B04A</code> · ราวบันไดชั้น ๑–๔</div></div>
     </div>
 
     <div class="themes">
       <div class="theme" style="--c:var(--f1)">
-        <div class="band"><i style="background:#B8B2A7;flex:4"></i><i style="background:#9C6B3C;flex:2"></i><i style="background:#6A9A3F;flex:2"></i><i style="background:#C9713C;flex:2"></i><i style="background:#F2A93B;flex:1"></i></div>
+        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#C9713C;flex:2"></i><i style="background:#6A9A3F;flex:2"></i></div>
         <div class="tx">
           <div class="fl">ชั้น ๑ · Launchpad</div>
           <h3>กาด</h3>
-          <p class="mood">คึกคัก อบอุ่น เปิดกว้าง เหมือนกาดล้านนายามเย็น</p>
-          <div class="hex">สีประจำชั้น ดินเผา <code>#C9713C</code> · สีเน้น ดาวเรือง <code>#F2A93B</code> · สีเขียวใบตอง <code>#6A9A3F</code></div>
-          <ul><li><b>แผงตลาดไอเดีย</b> ติดล้อ แต่ละทีมเขียนป้ายร้านของตัวเอง</li><li><b>ข่วง</b> เวทีนำเสนอแบบลานชุมชนล้านนา ขั้นอัฒจันทร์นั่งได้ทุกวัน</li><li><b>ฆ้องชัย</b> ตีเมื่อทีมได้ลูกค้ารายแรกที่จ่ายเงินจริง</li><li><b>ฝ้าโคม</b> แสงอุ่นเหนือพื้นที่ทำงานร่วม</li><li><b>สวนกาด</b> ผนังต้นไม้มีชีวิตที่ประตูกาด ต้นไม้ใหญ่กลางข่วง และกระถางสมุนไพรบนทุกแผง</li></ul>
-          <div class="chips"><span>ผนังต้นไม้มีชีวิต</span><span>คอนกรีตขัดมันโชว์หินเกล็ด</span><span>กระเบื้องดินเผาภาคเหนือ</span><span>ไม้สักเก่า</span><span>หวายสาน</span><span>แผ่นซับเสียงใยไม้</span></div>
+          <div class="hex">สีประจำชั้น ดินเผา <code>#C9713C</code> · สีเขียวจากต้นไม้จริง</div>
+          <div class="matlbl">ของตกแต่ง “ลูกเล่น”</div>
+          <ul><li><b>ป้ายร้านไม้เขียนมือ</b> เหนือโต๊ะแต่ละทีม</li><li><b>ฆ้องชัย</b> ตีเมื่อทีมได้ลูกค้ารายแรกที่จ่ายเงินจริง</li><li><b>โคมแบบล้านนา</b> หนึ่งกลุ่มเหนือคาเฟ่</li><li><b>ผนังต้นไม้มีชีวิต</b> ต้นไม้ใหญ่ที่เวทีนำเสนอ และกระถางสมุนไพรบนโต๊ะทีม</li></ul>
+          <div class="chips"><span>พื้น: คอนกรีตขัดมัน</span></div>
         </div>
       </div>
       <div class="theme" style="--c:var(--f2)">
-        <div class="band"><i style="background:#FAF6EE;flex:5"></i><i style="background:#9C6B3C;flex:2"></i><i style="background:#3F8F6F;flex:2"></i><i style="background:#B5CC4E;flex:1"></i></div>
+        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#3F8F6F;flex:2"></i><i style="background:#B5CC4E;flex:1"></i></div>
         <div class="tx">
           <div class="fl">ชั้น ๒ · Academy</div>
           <h3>ไร่ขั้นบันได</h3>
-          <p class="mood">สว่าง คึกคัก เหมือนโรงเรือนที่สิ่งต่าง ๆ กำลังเติบโต</p>
-          <div class="hex">สีประจำชั้น เขียวนาขั้นบันได <code>#3F8F6F</code> · สีเน้น เขียวข้าวอ่อน <code>#B5CC4E</code></div>
-          <ul><li><b>ฝ้าขั้นบันได</b> แผงซับเสียงไล่ระดับ ต่อเป็นผืนเดียวเมื่อเปิดผนังเลื่อน</li><li><b>ทุกผนังเขียนได้</b> ไม่มี “ผนังของครู”</li><li><b>โชว์ไส้ใน</b> รางสายกระจกและตู้เครือข่ายโปร่งใสเป็นสื่อการสอน</li><li><b>ผนังเมล็ดพันธุ์</b> ทุกรุ่นปลูกกระถางและทิ้งการ์ดโครงงาน</li></ul>
-          <div class="chips"><span>พื้นลิโนเลียม</span><span>ไม้อัดเบิร์ช</span><span>บอร์ดไม้ก๊อก</span><span>ผนังสีไวท์บอร์ด</span><span>ต้นไม้</span></div>
+          <div class="hex">สีประจำชั้น เขียวนาขั้นบันได <code>#3F8F6F</code> · เขียวข้าวอ่อน <code>#B5CC4E</code></div>
+          <div class="matlbl">ของตกแต่ง “ลูกเล่น”</div>
+          <ul><li><b>กราฟิกเส้นขั้นบันได</b> ฟิล์มฝ้าบนผนังกระจก</li><li><b>ชั้นวางต้นกล้า</b> ทุกรุ่นปลูกกระถาง</li><li><b>ตู้เครือข่ายโปร่งใส</b> หนึ่งตู้ในทางเดิน เป็นสื่อการสอน</li><li><b>สตูล</b> สีเขียวข้าวอ่อน</li></ul>
+          <div class="chips"><span>พื้น: ลิโนเลียม / ไวนิลสีเทา</span></div>
         </div>
       </div>
       <div class="theme" style="--c:var(--f3)">
-        <div class="band"><i style="background:#2B2F36;flex:5"></i><i style="background:#9C6B3C;flex:2"></i><i style="background:#0D3B66;flex:2"></i><i style="background:#3FC1C9;flex:1"></i></div>
+        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#0D3B66;flex:2"></i><i style="background:#3FC1C9;flex:1"></i></div>
         <div class="tx">
           <div class="fl">ชั้น ๓ · Engine</div>
           <h3>ป่าเมฆ</h3>
-          <p class="mood">เงียบ มีสมาธิ ลึกลับเล็กน้อย มองเห็นงานผ่านม่านหมอก</p>
-          <div class="hex">สีประจำชั้น ครามห้อม <code>#0D3B66</code> · สีเน้น ฟ้าสัญญาณ (แสงเท่านั้น) <code>#3FC1C9</code></div>
-          <ul><li><b>กระจกหมอก</b> ฝ้าไล่ระดับ มีจอ “ตอนนี้เรากำลังสร้างอะไร”</li><li><b>ลานโล่งกลางป่า</b> สนามหุ่นยนต์ ชมผ่าน “ซุ้มส่องสัตว์”</li><li><b>สายธารข้อมูล</b> เส้นไฟสว่างขึ้นเมื่อ GPU ทำงานหนัก</li><li><b>ร่มไม้</b> แผงสักหลาดโทนป่าเหนือมุมพัก</li></ul>
-          <div class="chips"><span>กระจกฝ้าไล่ระดับ</span><span>ผ้าฝ้ายย้อมห้อม</span><span>ฝ้าโลหะเจาะรู</span><span>ไวนิลกันไฟฟ้าสถิต</span><span>ระแนงไม้ย้อมสีเข้ม</span><span>แผงสักหลาด</span></div>
+          <div class="hex">สีประจำชั้น ครามห้อม <code>#0D3B66</code> · ฟ้า <code>#3FC1C9</code> เป็นแสงเท่านั้น</div>
+          <div class="matlbl">ของตกแต่ง “ลูกเล่น”</div>
+          <ul><li><b>ฟิล์มฝ้าแบบหมอก</b> บนกระจกห้องปฏิบัติการ พร้อมจอ “ตอนนี้เรากำลังสร้างอะไร”</li><li><b>เส้นไฟสายธารข้อมูล</b> สว่างขึ้นเมื่อ GPU ทำงานหนัก</li><li><b>กรอบไม้ซุ้มส่องสัตว์</b> รอบหน้าต่างชมสนามหุ่นยนต์</li><li><b>แผงมอสแห้ง</b> และโคมแบบหิ่งห้อยในมุมพัก</li></ul>
+          <div class="chips"><span>พื้น: ไวนิลกันไฟฟ้าสถิตสีเทา · อีพ็อกซีในสนาม</span></div>
         </div>
       </div>
       <div class="theme" style="--c:var(--f4)">
-        <div class="band"><i style="background:#EFE9DF;flex:5"></i><i style="background:#9C6B3C;flex:2"></i><i style="background:#6B5B95;flex:2"></i><i style="background:#A9C5B4;flex:1"></i></div>
+        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#6B5B95;flex:2"></i><i style="background:#A9C5B4;flex:1"></i></div>
         <div class="tx">
           <div class="fl">ชั้น ๔ · Bridge</div>
           <h3>ศาลาชาบนยอดดอย</h3>
-          <p class="mood">สงบ โปร่ง เป็นมิตร เหมือนวิวหลังไต่ขึ้นดอย</p>
-          <div class="hex">สีประจำชั้น ม่วงยามเย็น <code>#6B5B95</code> · สีเน้น เขียวศิลาดล <code>#A9C5B4</code></div>
-          <ul><li><b>บาร์น้ำชา</b> ต้อนรับพันธมิตรด้วยชาดอยตุง / ดอยแม่สลอง</li><li><b>ผนังวิว</b> แผนที่ปักหมุดพันธมิตรและบริษัทจาก ARIC</li><li><b>ศาลาส่วนตัว</b> บูธโทรศัพท์ โคมกระดาษสา</li><li><b>มุมริมหน้าต่าง</b> หนังสือ ต้นแบบ และเรื่องราวของศูนย์</li></ul>
-          <div class="chips"><span>พื้นไม้สัก</span><span>พรมแผ่นซับเสียง</span><span>กระดาษสา</span><span>ไม้ไผ่สาน</span><span>ผ้าลินิน</span><span>เครื่องเคลือบศิลาดล</span></div>
+          <div class="hex">สีประจำชั้น ม่วงยามเย็น <code>#6B5B95</code> · ศิลาดล <code>#A9C5B4</code></div>
+          <div class="matlbl">ของตกแต่ง “ลูกเล่น”</div>
+          <ul><li><b>บาร์น้ำชา</b> ชาดอยตุง / ดอยแม่สลอง กับชุดน้ำชาศิลาดล</li><li><b>ผนังแผนที่</b> ปักหมุดพันธมิตรและบริษัทจาก ARIC</li><li><b>โคมกระดาษสา</b> ในบูธทำงานเงียบ</li><li><b>กระถางต้นชา</b> ริมหน้าต่าง</li></ul>
+          <div class="chips"><span>พื้น: พรมแผ่นซับเสียงสีเทา</span></div>
         </div>
       </div>
     </div>
 
     <div class="note">
-      <b>หลักการสำหรับผู้ออกแบบ</b> สีประจำชั้นไม่เกิน ๑๐ % ของพื้นผิว · เลขชั้นและชื่อธีมด้วยสีประจำชั้นที่โถงลิฟต์ทุกชั้น ·
-      ผ้า กระดาษ หวาย ไม้ไผ่ ต้องเคลือบสารหน่วงไฟและไม่ใช้ในห้องเครื่อง · ใช้วัสดุจากภาคเหนือเมื่อทำได้ ·
-      ใส่ธีมผ่านสิ่งที่เปลี่ยนได้ (สี ผ้า ป้าย เฟอร์นิเจอร์) · ห้องที่ต้องการความแม่นยำของสีใช้สีเทากลาง
+      <b>หลักการสำหรับผู้ออกแบบ</b> โครงอาคารทันสมัยและเป็นสีกลาง ถอดของตกแต่งออกแล้วห้องต้องยังดูสมบูรณ์ ·
+      สีประจำชั้นไม่เกิน ๑๐ % ของพื้นผิว · เลขชั้นและชื่อธีมด้วยสีประจำชั้นที่โถงลิฟต์ · ของตกแต่งเคลื่อนย้ายได้
+      และผ่านมาตรฐานหน่วงไฟ · ตั้งงบเป็นครุภัณฑ์ตกแต่งแยกจากงานปรับปรุง · ห้องที่ต้องการความแม่นยำของสีใช้สีเทากลาง
     </div>
   </div>
 </section>
