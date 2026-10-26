@@ -156,11 +156,6 @@ tfoot td{font-weight:700;border-top:2px solid var(--line);border-bottom:none;pad
 .theme .mood{color:var(--muted);font-size:15px;margin:0 0 10px;font-style:italic}
 .theme ul{margin:0 0 12px;padding-left:20px;font-size:15px}
 .theme li{margin:3px 0}
-.mats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:4px}
-.mat{margin:0}
-.mat img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
-.mat figcaption{font-size:12.5px;line-height:1.35;color:var(--muted);margin-top:5px}
-.matlbl{font-size:13px;font-weight:600;color:var(--muted);margin:2px 0 6px}
 .theme .chips{display:flex;flex-wrap:wrap;gap:6px}
 .theme .chips span{font-size:13px;border:1px solid var(--line);border-radius:100px;padding:1px 10px;color:var(--muted)}
 .theme .hex{font-size:12.5px;color:var(--muted);margin-bottom:10px}
@@ -315,13 +310,12 @@ footer p{margin:.4em 0}
     <p class="ruleslead" style="margin-top:0">ชุดสีพื้นฐานทั้งอาคาร</p>
     <div class="palette">
       <div class="sw" style="--s:#FAF6EE"><i></i><div><b>ครีม ARIC</b><code>#FAF6EE</code> · ผนังและฝ้า</div></div>
-      <div class="sw" style="--s:#B8B2A7 url(tex/concrete.jpg) center/cover"><i></i><div><b>เทาคอนกรีต</b><code>#B8B2A7</code> · พื้น เสา บันได</div></div>
-      <div class="sw" style="--s:#9C6B3C url(tex/teak.jpg) center/cover"><i></i><div><b>ไม้สัก</b><code>#9C6B3C</code> · ราวจับ เคาน์เตอร์</div></div>
+      <div class="sw" style="--s:#B8B2A7"><i></i><div><b>เทาคอนกรีต</b><code>#B8B2A7</code> · พื้น เสา บันได</div></div>
+      <div class="sw" style="--s:#9C6B3C"><i></i><div><b>ไม้สัก</b><code>#9C6B3C</code> · ราวจับ เคาน์เตอร์</div></div>
       <div class="sw" style="--s:#7A1C1C"><i></i><div><b>แดง ARIC</b><code>#7A1C1C</code> · โลโก้และป้ายหลักเท่านั้น</div></div>
       <div class="sw" style="--s:#E4B04A"><i></i><div><b>ทอง “เส้น ARIC”</b><code>#E4B04A</code> · เส้นนำทางไต่จากชั้น ๑ ถึง ๔</div></div>
     </div>
 
-    <p class="sub" style="margin:0 0 14px;font-size:14px">ภาพพื้นผิววัสดุเป็นภาพจำลองเพื่อสื่อแนวคิดและโทนสี ไม่ใช่ตัวอย่างสินค้า — ให้ผู้ออกแบบเลือกวัสดุจริงตามแนวทางนี้</p>
     <div class="themes">
       <div class="theme" style="--c:var(--f1)">
         <div class="band"><i style="background:#B8B2A7;flex:4"></i><i style="background:#9C6B3C;flex:2"></i><i style="background:#6A9A3F;flex:2"></i><i style="background:#C9713C;flex:2"></i><i style="background:#F2A93B;flex:1"></i></div>
@@ -331,7 +325,7 @@ footer p{margin:.4em 0}
           <p class="mood">คึกคัก อบอุ่น เปิดกว้าง เหมือนกาดล้านนายามเย็น</p>
           <div class="hex">สีประจำชั้น ดินเผา <code>#C9713C</code> · สีเน้น ดาวเรือง <code>#F2A93B</code> · สีเขียวใบตอง <code>#6A9A3F</code></div>
           <ul><li><b>แผงตลาดไอเดีย</b> ติดล้อ แต่ละทีมเขียนป้ายร้านของตัวเอง</li><li><b>ข่วง</b> เวทีนำเสนอแบบลานชุมชนล้านนา ขั้นอัฒจันทร์นั่งได้ทุกวัน</li><li><b>ฆ้องชัย</b> ตีเมื่อทีมได้ลูกค้ารายแรกที่จ่ายเงินจริง</li><li><b>ฝ้าโคม</b> แสงอุ่นเหนือพื้นที่ทำงานร่วม</li><li><b>สวนกาด</b> ผนังต้นไม้มีชีวิตที่ประตูกาด ต้นไม้ใหญ่กลางข่วง และกระถางสมุนไพรบนทุกแผง</li></ul>
-          <div class="matlbl">วัสดุหลัก</div><div class="mats"><figure class="mat"><img src="tex/green_wall.jpg" alt="" width="240" height="240"><figcaption>ผนังต้นไม้มีชีวิต</figcaption></figure><figure class="mat"><img src="tex/concrete.jpg" alt="" width="240" height="240"><figcaption>คอนกรีตขัดมันโชว์หินเกล็ด</figcaption></figure><figure class="mat"><img src="tex/terracotta.jpg" alt="" width="240" height="240"><figcaption>กระเบื้องดินเผาภาคเหนือ</figcaption></figure><figure class="mat"><img src="tex/teak_reclaimed.jpg" alt="" width="240" height="240"><figcaption>ไม้สักเก่า</figcaption></figure><figure class="mat"><img src="tex/rattan.jpg" alt="" width="240" height="240"><figcaption>หวายสาน</figcaption></figure><figure class="mat"><img src="tex/woodwool.jpg" alt="" width="240" height="240"><figcaption>แผ่นซับเสียงใยไม้</figcaption></figure></div>
+          <div class="chips"><span>ผนังต้นไม้มีชีวิต</span><span>คอนกรีตขัดมันโชว์หินเกล็ด</span><span>กระเบื้องดินเผาภาคเหนือ</span><span>ไม้สักเก่า</span><span>หวายสาน</span><span>แผ่นซับเสียงใยไม้</span></div>
         </div>
       </div>
       <div class="theme" style="--c:var(--f2)">
@@ -342,7 +336,7 @@ footer p{margin:.4em 0}
           <p class="mood">สว่าง คึกคัก เหมือนโรงเรือนที่สิ่งต่าง ๆ กำลังเติบโต</p>
           <div class="hex">สีประจำชั้น เขียวนาขั้นบันได <code>#3F8F6F</code> · สีเน้น เขียวข้าวอ่อน <code>#B5CC4E</code></div>
           <ul><li><b>ฝ้าขั้นบันได</b> แผงซับเสียงไล่ระดับ ต่อเป็นผืนเดียวเมื่อเปิดผนังเลื่อน</li><li><b>ทุกผนังเขียนได้</b> ไม่มี “ผนังของครู”</li><li><b>โชว์ไส้ใน</b> รางสายกระจกและตู้เครือข่ายโปร่งใสเป็นสื่อการสอน</li><li><b>ผนังเมล็ดพันธุ์</b> ทุกรุ่นปลูกกระถางและทิ้งการ์ดโครงงาน</li></ul>
-          <div class="matlbl">วัสดุหลัก</div><div class="mats"><figure class="mat"><img src="tex/linoleum.jpg" alt="" width="240" height="240"><figcaption>พื้นลิโนเลียม</figcaption></figure><figure class="mat"><img src="tex/birch_ply.jpg" alt="" width="240" height="240"><figcaption>ไม้อัดเบิร์ช</figcaption></figure><figure class="mat"><img src="tex/cork.jpg" alt="" width="240" height="240"><figcaption>บอร์ดไม้ก๊อก</figcaption></figure><figure class="mat"><img src="tex/whiteboard.jpg" alt="" width="240" height="240"><figcaption>ผนังสีไวท์บอร์ด</figcaption></figure><figure class="mat"><img src="tex/plants.jpg" alt="" width="240" height="240"><figcaption>ต้นไม้</figcaption></figure></div>
+          <div class="chips"><span>พื้นลิโนเลียม</span><span>ไม้อัดเบิร์ช</span><span>บอร์ดไม้ก๊อก</span><span>ผนังสีไวท์บอร์ด</span><span>ต้นไม้</span></div>
         </div>
       </div>
       <div class="theme" style="--c:var(--f3)">
@@ -353,7 +347,7 @@ footer p{margin:.4em 0}
           <p class="mood">เงียบ มีสมาธิ ลึกลับเล็กน้อย มองเห็นงานผ่านม่านหมอก</p>
           <div class="hex">สีประจำชั้น ครามห้อม <code>#0D3B66</code> · สีเน้น ฟ้าสัญญาณ (แสงเท่านั้น) <code>#3FC1C9</code></div>
           <ul><li><b>กระจกหมอก</b> ฝ้าไล่ระดับ มีจอ “ตอนนี้เรากำลังสร้างอะไร”</li><li><b>ลานโล่งกลางป่า</b> สนามหุ่นยนต์ ชมผ่าน “ซุ้มส่องสัตว์”</li><li><b>สายธารข้อมูล</b> เส้นไฟสว่างขึ้นเมื่อ GPU ทำงานหนัก</li><li><b>ร่มไม้</b> แผงสักหลาดโทนป่าเหนือมุมพัก</li></ul>
-          <div class="matlbl">วัสดุหลัก</div><div class="mats"><figure class="mat"><img src="tex/frosted_glass.jpg" alt="" width="240" height="240"><figcaption>กระจกฝ้าไล่ระดับ</figcaption></figure><figure class="mat"><img src="tex/indigo_cotton.jpg" alt="" width="240" height="240"><figcaption>ผ้าฝ้ายย้อมห้อม</figcaption></figure><figure class="mat"><img src="tex/perforated_metal.jpg" alt="" width="240" height="240"><figcaption>ฝ้าโลหะเจาะรู</figcaption></figure><figure class="mat"><img src="tex/esd_vinyl.jpg" alt="" width="240" height="240"><figcaption>ไวนิลกันไฟฟ้าสถิต</figcaption></figure><figure class="mat"><img src="tex/dark_timber_slats.jpg" alt="" width="240" height="240"><figcaption>ระแนงไม้ย้อมสีเข้ม</figcaption></figure><figure class="mat"><img src="tex/felt.jpg" alt="" width="240" height="240"><figcaption>แผงสักหลาด</figcaption></figure></div>
+          <div class="chips"><span>กระจกฝ้าไล่ระดับ</span><span>ผ้าฝ้ายย้อมห้อม</span><span>ฝ้าโลหะเจาะรู</span><span>ไวนิลกันไฟฟ้าสถิต</span><span>ระแนงไม้ย้อมสีเข้ม</span><span>แผงสักหลาด</span></div>
         </div>
       </div>
       <div class="theme" style="--c:var(--f4)">
@@ -364,7 +358,7 @@ footer p{margin:.4em 0}
           <p class="mood">สงบ โปร่ง เป็นมิตร เหมือนวิวหลังไต่ขึ้นดอย</p>
           <div class="hex">สีประจำชั้น ม่วงยามเย็น <code>#6B5B95</code> · สีเน้น เขียวศิลาดล <code>#A9C5B4</code></div>
           <ul><li><b>บาร์น้ำชา</b> ต้อนรับพันธมิตรด้วยชาดอยตุง / ดอยแม่สลอง</li><li><b>ผนังวิว</b> แผนที่ปักหมุดพันธมิตรและบริษัทจาก ARIC</li><li><b>ศาลาส่วนตัว</b> บูธโทรศัพท์ โคมกระดาษสา</li><li><b>มุมริมหน้าต่าง</b> หนังสือ ต้นแบบ และเรื่องราวของศูนย์</li></ul>
-          <div class="matlbl">วัสดุหลัก</div><div class="mats"><figure class="mat"><img src="tex/teak.jpg" alt="" width="240" height="240"><figcaption>พื้นไม้สัก</figcaption></figure><figure class="mat"><img src="tex/carpet_tile.jpg" alt="" width="240" height="240"><figcaption>พรมแผ่นซับเสียง</figcaption></figure><figure class="mat"><img src="tex/sa_paper.jpg" alt="" width="240" height="240"><figcaption>กระดาษสา</figcaption></figure><figure class="mat"><img src="tex/woven_bamboo.jpg" alt="" width="240" height="240"><figcaption>ไม้ไผ่สาน</figcaption></figure><figure class="mat"><img src="tex/linen.jpg" alt="" width="240" height="240"><figcaption>ผ้าลินิน</figcaption></figure><figure class="mat"><img src="tex/celadon.jpg" alt="" width="240" height="240"><figcaption>เครื่องเคลือบศิลาดล</figcaption></figure></div>
+          <div class="chips"><span>พื้นไม้สัก</span><span>พรมแผ่นซับเสียง</span><span>กระดาษสา</span><span>ไม้ไผ่สาน</span><span>ผ้าลินิน</span><span>เครื่องเคลือบศิลาดล</span></div>
         </div>
       </div>
     </div>
