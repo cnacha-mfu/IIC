@@ -137,6 +137,29 @@ tfoot td{font-weight:700;border-top:2px solid var(--line);border-bottom:none;pad
   font-size:15px;color:var(--ink)}
 .note b{color:var(--accent)}
 
+/* ---------- floor themes ---------- */
+.palette{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:22px 0 30px}
+.sw{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:14px}
+.sw i{display:block;height:46px;background:var(--s);border-bottom:1px solid var(--line)}
+.sw div{padding:8px 12px}
+.sw b{display:block;font-size:14.5px}
+.sw code{font-size:12.5px;color:var(--muted)}
+.themes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:760px){.themes{grid-template-columns:1fr}}
+.theme{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.theme .band{display:flex;height:64px;border-bottom:1px solid var(--line)}
+.thm{font-size:13px;font-weight:600;color:#fff;background:var(--c);border-radius:100px;padding:1px 10px}
+.theme .band i{flex:1}
+.theme .tx{padding:18px 20px 20px}
+.theme .fl{font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--c)}
+.theme h3{font-size:22px;margin:2px 0 4px}
+.theme .mood{color:var(--muted);font-size:15px;margin:0 0 10px;font-style:italic}
+.theme ul{margin:0 0 12px;padding-left:20px;font-size:15px}
+.theme li{margin:3px 0}
+.theme .chips{display:flex;flex-wrap:wrap;gap:6px}
+.theme .chips span{font-size:13px;border:1px solid var(--line);border-radius:100px;padding:1px 10px;color:var(--muted)}
+.theme .hex{font-size:12.5px;color:var(--muted);margin-bottom:10px}
+
 /* ---------- decisions ---------- */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
@@ -192,7 +215,7 @@ footer p{margin:.4em 0}
       รายการห้อง หน้าที่ใช้สอย และความจุผู้ใช้งาน · ขนาดพื้นที่จริงรอผลการรังวัดอาคาร
       จึงยังไม่ระบุไว้ในเอกสารฉบับนี้
     </p>
-    <p class="meta">ฉบับย่อ v1.4 · สิงหาคม ๒๕๖๙ · ร่างเพื่อพิจารณา <span class="badge">เอกสารภายใน</span></p>
+    <p class="meta">ฉบับย่อ v1.5 · ตุลาคม ๒๕๖๙ · ร่างเพื่อพิจารณา <span class="badge">เอกสารภายใน</span></p>
 
     <figure class="shot">
       <img src="building.jpg" alt="อาคารมหาวิทยาลัยแม่ฟ้าหลวง จังหวัดเชียงราย" width="1536" height="1024">
@@ -211,6 +234,7 @@ footer p{margin:.4em 0}
 <nav class="floors">
   <div class="wrap">
     <a href="#concept">แนวคิด</a>
+    <a href="#themes">ธีมรายชั้น</a>
     <a href="#f1">ชั้น ๑ Launchpad</a>
     <a href="#f2">ชั้น ๒ Academy</a>
     <a href="#f3">ชั้น ๓ Engine</a>
@@ -229,25 +253,25 @@ footer p{margin:.4em 0}
 
     <div class="stack">
       <div class="level" style="--c:var(--f1)">
-        <span class="n">๑</span><span class="t">Launchpad</span>
+        <span class="n">๑</span><span class="t">Launchpad · <a href="#themes" style="color:var(--c);text-decoration:none">กาด</a></span>
         <span class="d">ทำงานร่วม · บ่มเพาะ · จัดแสดง · เวทีนำเสนอ</span>
         <span class="tier">ระดับ ๐ · สาธารณะ</span>
         <span class="sub2"><b>บุคลิก</b> เปิดโล่ง มองเห็นได้ ปรับเปลี่ยนง่าย · <b>ผู้ใช้งานในวันปกติ</b> ผู้มาเยือน นักลงทุน ทีมสตาร์ทอัพ นักศึกษา</span>
       </div>
       <div class="level" style="--c:var(--f2)">
-        <span class="n">๒</span><span class="t">Academy</span>
+        <span class="n">๒</span><span class="t">Academy · <a href="#themes" style="color:var(--c);text-decoration:none">ไร่ขั้นบันได</a></span>
         <span class="d">ห้องปฏิบัติการคอมพิวเตอร์อเนกประสงค์ ๖๐/๑๒๐ ที่นั่ง</span>
         <span class="tier">ระดับ ๑ · ผู้ลงทะเบียน</span>
         <span class="sub2"><b>บุคลิก</b> ใช้งานหนัก หมุนเวียนเร็ว ปรับรูปแบบได้ · <b>ผู้ใช้งานในวันปกติ</b> ผู้เข้าอบรม นักศึกษา หลักสูตรองค์กร ผู้สอน · งานที่ใช้ไฟฟ้าต้องมีผู้ควบคุม</span>
       </div>
       <div class="level" style="--c:var(--f3)">
-        <span class="n">๓</span><span class="t">Engine</span>
+        <span class="n">๓</span><span class="t">Engine · <a href="#themes" style="color:var(--c);text-decoration:none">ป่าเมฆ</a></span>
         <span class="d">ห้องเครื่อง GPU · วิจัย AI · สนามหุ่นยนต์ · สตูดิโอ</span>
         <span class="tier">ระดับ ๒–๓ · สังกัดโครงการ</span>
         <span class="sub2"><b>บุคลิก</b> เงียบ ควบคุม เชิงเทคนิค · <b>ผู้ใช้งานในวันปกติ</b> นักวิจัย วิศวกร นักศึกษาบัณฑิตศึกษา</span>
       </div>
       <div class="level" style="--c:var(--f4)">
-        <span class="n">๔</span><span class="t">Bridge</span>
+        <span class="n">๔</span><span class="t">Bridge · <a href="#themes" style="color:var(--c);text-decoration:none">ศาลาชาบนยอดดอย</a></span>
         <span class="d">สำนักงาน · ผู้บริหาร · งานที่ปรึกษาและพันธมิตร</span>
         <span class="tier">ระดับ ๒ · เจ้าหน้าที่</span>
         <span class="sub2"><b>บุคลิก</b> สงบ เป็นทางการ เป็นความลับ · <b>ผู้ใช้งานในวันปกติ</b> ผู้อำนวยการ ธุรการ ทีมโครงการ พันธมิตร · ผู้มาติดต่อต้องมีผู้นำทาง</span>
@@ -276,6 +300,77 @@ footer p{margin:.4em 0}
   </div>
 </section>
 
+<section id="themes">
+  <div class="wrap">
+    <h2>ธีม สี และวัสดุรายชั้น — “ขึ้นดอย”</h2>
+    <p class="sub">โลโก้ ARIC คือแนวดอยเชียงราย อาคารจึงเล่าการไต่ขึ้นดอยทีละชั้น จาก <b>กาดที่ตีนดอย</b>
+      ผ่าน <b>ไร่ขั้นบันได</b> เข้าสู่ <b>ป่าเมฆ</b> ถึง <b>ศาลาชาบนยอดดอย</b> ซึ่งสื่อถึงดอยตุงและดอยแม่สลอง
+      มรดกของแม่ฟ้าหลวง ธีมของแต่ละชั้นสะท้อนหน้าที่ของชั้นนั้น</p>
+
+    <p class="ruleslead" style="margin-top:0">ชุดสีพื้นฐานทั้งอาคาร</p>
+    <div class="palette">
+      <div class="sw" style="--s:#FAF6EE"><i></i><div><b>ครีม ARIC</b><code>#FAF6EE</code> · ผนังและฝ้า</div></div>
+      <div class="sw" style="--s:#B8B2A7"><i></i><div><b>เทาคอนกรีต</b><code>#B8B2A7</code> · พื้น เสา บันได</div></div>
+      <div class="sw" style="--s:#9C6B3C"><i></i><div><b>ไม้สัก</b><code>#9C6B3C</code> · ราวจับ เคาน์เตอร์</div></div>
+      <div class="sw" style="--s:#7A1C1C"><i></i><div><b>แดง ARIC</b><code>#7A1C1C</code> · โลโก้และป้ายหลักเท่านั้น</div></div>
+      <div class="sw" style="--s:#E4B04A"><i></i><div><b>ทอง “เส้น ARIC”</b><code>#E4B04A</code> · เส้นนำทางไต่จากชั้น ๑ ถึง ๔</div></div>
+    </div>
+
+    <div class="themes">
+      <div class="theme" style="--c:var(--f1)">
+        <div class="band"><i style="background:#B8B2A7;flex:5"></i><i style="background:#9C6B3C;flex:2"></i><i style="background:#C9713C;flex:2"></i><i style="background:#F2A93B;flex:1"></i></div>
+        <div class="tx">
+          <div class="fl">ชั้น ๑ · Launchpad</div>
+          <h3>กาด</h3>
+          <p class="mood">คึกคัก อบอุ่น เปิดกว้าง เหมือนกาดล้านนายามเย็น</p>
+          <div class="hex">สีประจำชั้น ดินเผา <code>#C9713C</code> · สีเน้น ดาวเรือง <code>#F2A93B</code></div>
+          <ul><li><b>แผงตลาดไอเดีย</b> ติดล้อ แต่ละทีมเขียนป้ายร้านของตัวเอง</li><li><b>ข่วง</b> เวทีนำเสนอแบบลานชุมชนล้านนา ขั้นอัฒจันทร์นั่งได้ทุกวัน</li><li><b>ฆ้องชัย</b> ตีเมื่อทีมได้ลูกค้ารายแรกที่จ่ายเงินจริง</li><li><b>ฝ้าโคม</b> แสงอุ่นเหนือพื้นที่ทำงานร่วม</li></ul>
+          <div class="chips"><span>คอนกรีตขัดมัน</span><span>กระเบื้องดินเผา</span><span>ไม้สักเก่า</span><span>หวาย / ไม้ไผ่สาน</span><span>แผ่นซับเสียงใยไม้</span></div>
+        </div>
+      </div>
+      <div class="theme" style="--c:var(--f2)">
+        <div class="band"><i style="background:#FAF6EE;flex:5"></i><i style="background:#9C6B3C;flex:2"></i><i style="background:#3F8F6F;flex:2"></i><i style="background:#B5CC4E;flex:1"></i></div>
+        <div class="tx">
+          <div class="fl">ชั้น ๒ · Academy</div>
+          <h3>ไร่ขั้นบันได</h3>
+          <p class="mood">สว่าง คึกคัก เหมือนโรงเรือนที่สิ่งต่าง ๆ กำลังเติบโต</p>
+          <div class="hex">สีประจำชั้น เขียวนาขั้นบันได <code>#3F8F6F</code> · สีเน้น เขียวข้าวอ่อน <code>#B5CC4E</code></div>
+          <ul><li><b>ฝ้าขั้นบันได</b> แผงซับเสียงไล่ระดับ ต่อเป็นผืนเดียวเมื่อเปิดผนังเลื่อน</li><li><b>ทุกผนังเขียนได้</b> ไม่มี “ผนังของครู”</li><li><b>โชว์ไส้ใน</b> รางสายกระจกและตู้เครือข่ายโปร่งใสเป็นสื่อการสอน</li><li><b>ผนังเมล็ดพันธุ์</b> ทุกรุ่นปลูกกระถางและทิ้งการ์ดโครงงาน</li></ul>
+          <div class="chips"><span>พื้นลิโนเลียม / ยาง</span><span>ไม้อัดเบิร์ช</span><span>ไม้ก๊อก</span><span>สีไวท์บอร์ด</span><span>ต้นไม้</span></div>
+        </div>
+      </div>
+      <div class="theme" style="--c:var(--f3)">
+        <div class="band"><i style="background:#2B2F36;flex:5"></i><i style="background:#9C6B3C;flex:2"></i><i style="background:#0D3B66;flex:2"></i><i style="background:#3FC1C9;flex:1"></i></div>
+        <div class="tx">
+          <div class="fl">ชั้น ๓ · Engine</div>
+          <h3>ป่าเมฆ</h3>
+          <p class="mood">เงียบ มีสมาธิ ลึกลับเล็กน้อย มองเห็นงานผ่านม่านหมอก</p>
+          <div class="hex">สีประจำชั้น ครามห้อม <code>#0D3B66</code> · สีเน้น ฟ้าสัญญาณ (แสงเท่านั้น) <code>#3FC1C9</code></div>
+          <ul><li><b>กระจกหมอก</b> ฝ้าไล่ระดับ มีจอ “ตอนนี้เรากำลังสร้างอะไร”</li><li><b>ลานโล่งกลางป่า</b> สนามหุ่นยนต์ ชมผ่าน “ซุ้มส่องสัตว์”</li><li><b>สายธารข้อมูล</b> เส้นไฟสว่างขึ้นเมื่อ GPU ทำงานหนัก</li><li><b>ร่มไม้</b> แผงสักหลาดโทนป่าเหนือมุมพัก</li></ul>
+          <div class="chips"><span>กระจกฝ้า / ปรับความทึบ</span><span>ผ้าฝ้ายย้อมห้อม</span><span>โลหะเจาะรู</span><span>ไวนิลกันไฟฟ้าสถิต</span><span>สักหลาด</span></div>
+        </div>
+      </div>
+      <div class="theme" style="--c:var(--f4)">
+        <div class="band"><i style="background:#EFE9DF;flex:5"></i><i style="background:#9C6B3C;flex:2"></i><i style="background:#6B5B95;flex:2"></i><i style="background:#A9C5B4;flex:1"></i></div>
+        <div class="tx">
+          <div class="fl">ชั้น ๔ · Bridge</div>
+          <h3>ศาลาชาบนยอดดอย</h3>
+          <p class="mood">สงบ โปร่ง เป็นมิตร เหมือนวิวหลังไต่ขึ้นดอย</p>
+          <div class="hex">สีประจำชั้น ม่วงยามเย็น <code>#6B5B95</code> · สีเน้น เขียวศิลาดล <code>#A9C5B4</code></div>
+          <ul><li><b>บาร์น้ำชา</b> ต้อนรับพันธมิตรด้วยชาดอยตุง / ดอยแม่สลอง</li><li><b>ผนังวิว</b> แผนที่ปักหมุดพันธมิตรและบริษัทจาก ARIC</li><li><b>ศาลาส่วนตัว</b> บูธโทรศัพท์ โคมกระดาษสา</li><li><b>มุมริมหน้าต่าง</b> หนังสือ ต้นแบบ และเรื่องราวของศูนย์</li></ul>
+          <div class="chips"><span>ไม้สัก</span><span>พรมแผ่นซับเสียง</span><span>กระดาษสา</span><span>ไม้ไผ่สาน</span><span>ผ้าลินิน</span><span>ศิลาดล</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      <b>หลักการสำหรับผู้ออกแบบ</b> สีประจำชั้นไม่เกิน ๑๐ % ของพื้นผิว · เลขชั้นและชื่อธีมด้วยสีประจำชั้นที่โถงลิฟต์ทุกชั้น ·
+      ผ้า กระดาษ หวาย ไม้ไผ่ ต้องเคลือบสารหน่วงไฟและไม่ใช้ในห้องเครื่อง · ใช้วัสดุจากภาคเหนือเมื่อทำได้ ·
+      ใส่ธีมผ่านสิ่งที่เปลี่ยนได้ (สี ผ้า ป้าย เฟอร์นิเจอร์) · ห้องที่ต้องการความแม่นยำของสีใช้สีเทากลาง
+    </div>
+  </div>
+</section>
+
 <section id="f1">
   <div class="wrap">
     <h2>รายการห้องรายชั้น</h2>
@@ -295,7 +390,7 @@ footer p{margin:.4em 0}
     </div>
 
     <div class="floor" style="--c:var(--f1)">
-      <h3>ชั้น ๑ · Launchpad <span class="tag">๙ ห้อง</span></h3>
+      <h3>ชั้น ๑ · Launchpad <span class="tag">๙ ห้อง</span> <span class="thm">ธีม กาด</span></h3>
       <p class="concept">
         ชั้นล่างที่คนแปลกหน้าเดินเข้ามาได้ ทุกพื้นที่ออกแบบให้เข้าได้โดยไม่ต้องขออนุญาต
         และเข้าใจได้โดยไม่ต้องมีคนอธิบาย ทำหน้าที่ระดมทุน ดึงดูดบุคลากร และสร้างพันธมิตร
@@ -322,7 +417,7 @@ footer p{margin:.4em 0}
     </div>
 
     <div class="floor" id="f2" style="--c:var(--f2)">
-      <h3>ชั้น ๒ · Academy <span class="tag">๘ ห้อง</span></h3>
+      <h3>ชั้น ๒ · Academy <span class="tag">๘ ห้อง</span> <span class="thm">ธีม ไร่ขั้นบันได</span></h3>
       <p class="concept">
         ห้องฝึกอบรม ๖ ห้อง <b>ห้องละไม่น้อยกว่า ๖๐ คน</b> จัดเป็น ๒ แถว แถวละ ๓ ห้อง มีทางเดินกลาง ·
         ห้องที่อยู่ติดกันจับคู่เปิดรวมด้วยผนังเลื่อนกันเสียงได้เป็น ๑๒๐ คน สำหรับการบรรยายใหญ่
@@ -351,7 +446,7 @@ footer p{margin:.4em 0}
     </div>
 
     <div class="floor" id="f3" style="--c:var(--f3)">
-      <h3>ชั้น ๓ · Engine <span class="tag">๕ ห้อง</span></h3>
+      <h3>ชั้น ๓ · Engine <span class="tag">๕ ห้อง</span> <span class="thm">ธีม ป่าเมฆ</span></h3>
       <p class="concept">
         ชั้นที่มีข้อกำหนดทางเทคนิคสูงสุด รวมสภาพแวดล้อม ๔ แบบที่ขัดแย้งกันเอง — ห้องเครื่องที่ต้องเย็นและ
         รับน้ำหนักมาก · งานหุ่นยนต์ที่ต้องการพื้นโล่งและความสูง · สตูดิโอที่ต้องการความเงียบ ·
@@ -375,7 +470,7 @@ footer p{margin:.4em 0}
     </div>
 
     <div class="floor" id="f4" style="--c:var(--f4)">
-      <h3>ชั้น ๔ · Bridge <span class="tag">๑๒ ห้อง</span></h3>
+      <h3>ชั้น ๔ · Bridge <span class="tag">๑๒ ห้อง</span> <span class="thm">ธีม ศาลาชาบนยอดดอย</span></h3>
       <p class="concept">
         ภาพลักษณ์ทางวิชาชีพของศูนย์ และเป็นชั้นเดียวที่มีงานที่เป็นความลับ — สัญญา ทรัพย์สินทางปัญญา
         การเจรจากับพันธมิตร งบประมาณ และงานบุคคล มีห้องประชุมระดับกรรมการเพื่อให้กรรมการสภาฯ
