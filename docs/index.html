@@ -148,6 +148,10 @@ tfoot td{font-weight:700;border-top:2px solid var(--line);border-bottom:none;pad
 @media (max-width:760px){.themes{grid-template-columns:1fr}}
 .theme{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
 .theme .band{display:flex;height:64px;border-bottom:1px solid var(--line)}
+.theme .band.thin{height:12px}
+.cimg{display:block;aspect-ratio:1408/768;overflow:hidden;background:var(--line)}
+.cimg img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.cimg:hover img{transform:scale(1.03)}
 .thm{font-size:13px;font-weight:600;color:#fff;background:var(--c);border-radius:100px;padding:1px 10px}
 .theme .band i{flex:1}
 .theme .tx{padding:18px 20px 20px}
@@ -330,9 +334,11 @@ footer p{margin:.4em 0}
       <div class="sw" style="--s:#E4B04A"><i></i><div><b>ทอง “เส้น ARIC”</b><code>#E4B04A</code> · ราวบันไดชั้น ๑–๔</div></div>
     </div>
 
+    <p class="sub" style="margin:0 0 14px;font-size:14px">ภาพประกอบเป็นภาพตัวอย่างแนวคิดที่สร้างด้วย AI เพื่อสื่อบรรยากาศ ไม่ใช่แบบก่อสร้าง · ตัวอักษรในภาพไม่มีความหมาย · คลิกที่ภาพเพื่อดูขนาดเต็ม</p>
     <div class="themes">
       <div class="theme" style="--c:var(--f1)">
-        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#C9713C;flex:1"></i><i style="background:#3F8F6F;flex:1"></i><i style="background:#6B5B95;flex:1"></i><i style="background:#0D3B66;flex:1"></i></div>
+        <a class="cimg" href="concept_f1.jpg" target="_blank" rel="noopener"><img src="concept_f1.jpg" alt="ภาพตัวอย่างแนวคิดชั้น ๑ Base Camp — พื้นที่บ่มเพาะ นิทรรศการ ผนังต้นไม้ และบาร์กาแฟ" width="1408" height="768"></a>
+        <div class="band thin"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#C9713C;flex:1"></i><i style="background:#3F8F6F;flex:1"></i><i style="background:#6B5B95;flex:1"></i><i style="background:#0D3B66;flex:1"></i></div>
         <div class="tx">
           <div class="fl">ชั้น ๑ · Launchpad</div>
           <h3>Base Camp</h3>
@@ -344,7 +350,8 @@ footer p{margin:.4em 0}
         </div>
       </div>
       <div class="theme" style="--c:var(--f2)">
-        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#3F8F6F;flex:2"></i><i style="background:#B5CC4E;flex:1"></i></div>
+        <a class="cimg" href="concept_f2.jpg" target="_blank" rel="noopener"><img src="concept_f2.jpg" alt="ภาพตัวอย่างแนวคิดชั้น ๒ Training Camp — ห้องฝึกอบรมผนังกระจก Open Rack และ Cohort Wall" width="1408" height="768"></a>
+        <div class="band thin"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#3F8F6F;flex:2"></i><i style="background:#B5CC4E;flex:1"></i></div>
         <div class="tx">
           <div class="fl">ชั้น ๒ · Academy</div>
           <h3>Training Camp</h3>
@@ -356,7 +363,8 @@ footer p{margin:.4em 0}
         </div>
       </div>
       <div class="theme" style="--c:var(--f3)">
-        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#6B5B95;flex:2"></i><i style="background:#C9C0E0;flex:1"></i></div>
+        <a class="cimg" href="concept_f3.jpg" target="_blank" rel="noopener"><img src="concept_f3.jpg" alt="ภาพตัวอย่างแนวคิดชั้น ๓ High Camp — ทางเดินห้องปฏิบัติการ Live Compute Wall และระเบียงชมสนามหุ่นยนต์" width="1408" height="768"></a>
+        <div class="band thin"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#6B5B95;flex:2"></i><i style="background:#C9C0E0;flex:1"></i></div>
         <div class="tx">
           <div class="fl">ชั้น ๓ · Engine</div>
           <h3>High Camp</h3>
@@ -368,7 +376,8 @@ footer p{margin:.4em 0}
         </div>
       </div>
       <div class="theme" style="--c:var(--f4)">
-        <div class="band"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#0D3B66;flex:2"></i><i style="background:#8DB3D9;flex:1"></i></div>
+        <a class="cimg" href="concept_f4.jpg" target="_blank" rel="noopener"><img src="concept_f4.jpg" alt="ภาพตัวอย่างแนวคิดชั้น ๔ Summit — โถงพันธมิตร Partner Map และวิวภูเขา" width="1408" height="768"></a>
+        <div class="band thin"><i style="background:#F7F6F3;flex:4"></i><i style="background:#DAD8D3;flex:2"></i><i style="background:#C9A57A;flex:2"></i><i style="background:#2A2A2A;flex:1"></i><i style="background:#0D3B66;flex:2"></i><i style="background:#8DB3D9;flex:1"></i></div>
         <div class="tx">
           <div class="fl">ชั้น ๔ · Bridge</div>
           <h3>Summit</h3>
