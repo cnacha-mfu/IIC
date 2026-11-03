@@ -8,51 +8,44 @@
   </defs>
 
   <!-- sun -->
-  <circle cx="418" cy="118" r="30" fill="#E4B04A"/>
+  <g transform="translate(0 -19)">
+  <circle cx="418" cy="180" r="30" fill="#E4B04A"/>
 
   <!-- mountain range: one silhouette, two peaks -->
-  <path d="M56 400 L168 192 L244 282 L320 140 L456 400 Z" fill="url(#range)"/>
+  <path d="M56.0 400.0 L122.9 313.1 Q145.4 283.7 165.8 276.6 Q186.2 269.5 204.5 284.6 L207.5 287.2 Q225.8 302.3 242.8 299.5 Q259.8 296.7 275.6 276.1 L283.5 265.7 Q301.8 241.9 323.5 246.8 Q345.1 251.6 370.3 285.3 L456.0 400.0 L352.0 400.0 L220.0 400.0 L56.0 400.0 Z" fill="url(#range)"/>
   <g>
-    <path d="M56 400 L168 192 L232 352 Z" fill="#000000" fill-opacity="0.09"/>
-    <path d="M56 400 L232 352 L220 400 Z" fill="#000000" fill-opacity="0.225"/>
-    <path d="M168 192 L244 282 L232 352 Z" fill="#FFFFFF" fill-opacity="0.09"/>
-    <path d="M244 282 L300 236 L232 352 Z" fill="#000000" fill-opacity="0.135"/>
-    <path d="M244 282 L320 140 L300 236 Z" fill="#FFFFFF" fill-opacity="0.125"/>
-    <path d="M320 140 L352 320 L300 236 Z" fill="#000000" fill-opacity="0.165"/>
-    <path d="M320 140 L456 400 L352 320 Z" fill="#000000" fill-opacity="0.255"/>
-    <path d="M300 236 L352 320 L232 352 Z" fill="#000000" fill-opacity="0.105"/>
-    <path d="M232 352 L352 320 L352 400 Z" fill="#000000" fill-opacity="0.195"/>
-    <path d="M232 352 L352 400 L220 400 Z" fill="#000000" fill-opacity="0.285"/>
-    <path d="M352 320 L456 400 L352 400 Z" fill="#000000" fill-opacity="0.3"/>
+    <path d="M56.0 400.0 L122.9 313.1 Q145.4 283.7 165.8 276.6 L232.0 366.4 L56.0 400.0 Z" fill="#000000" fill-opacity="0.09"/>
+    <path d="M56.0 400.0 L232.0 366.4 L220.0 400.0 L56.0 400.0 Z" fill="#000000" fill-opacity="0.225"/>
+    <path d="M165.8 276.6 Q186.2 269.5 204.5 284.6 L207.5 287.2 Q225.8 302.3 242.8 299.5 L232.0 366.4 L165.8 276.6 Z" fill="#FFFFFF" fill-opacity="0.09"/>
+    <path d="M242.8 299.5 L300.0 297.8 L232.0 366.4 L242.8 299.5 Z" fill="#000000" fill-opacity="0.135"/>
+    <path d="M242.8 299.5 Q259.8 296.7 275.6 276.1 L283.5 265.7 Q301.8 241.9 323.5 246.8 L300.0 297.8 L242.8 299.5 Z" fill="#FFFFFF" fill-opacity="0.125"/>
+    <path d="M323.5 246.8 L352.0 346.8 L300.0 297.8 L323.5 246.8 Z" fill="#000000" fill-opacity="0.165"/>
+    <path d="M323.5 246.8 Q345.1 251.6 370.3 285.3 L456.0 400.0 L352.0 346.8 L323.5 246.8 Z" fill="#000000" fill-opacity="0.255"/>
+    <path d="M300.0 297.8 L352.0 346.8 L232.0 366.4 L300.0 297.8 Z" fill="#000000" fill-opacity="0.105"/>
+    <path d="M232.0 366.4 L352.0 346.8 L352.0 400.0 L232.0 366.4 Z" fill="#000000" fill-opacity="0.195"/>
+    <path d="M232.0 366.4 L352.0 400.0 L220.0 400.0 L232.0 366.4 Z" fill="#000000" fill-opacity="0.285"/>
+    <path d="M352.0 346.8 L456.0 400.0 L352.0 400.0 L352.0 346.8 Z" fill="#000000" fill-opacity="0.3"/>
   </g>
-  <g stroke="#F3D48A" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.85">
-    <path d="M56 400 L168 192"/>
-    <path d="M168 192 L232 352"/>
-    <path d="M56 400 L232 352"/>
-    <path d="M220 400 L232 352"/>
-    <path d="M168 192 L244 282"/>
-    <path d="M232 352 L244 282"/>
-    <path d="M244 282 L300 236"/>
-    <path d="M232 352 L300 236"/>
-    <path d="M244 282 L320 140"/>
-    <path d="M300 236 L320 140"/>
-    <path d="M320 140 L352 320"/>
-    <path d="M300 236 L352 320"/>
-    <path d="M320 140 L456 400"/>
-    <path d="M352 320 L456 400"/>
-    <path d="M232 352 L352 320"/>
-    <path d="M352 320 L352 400"/>
-    <path d="M232 352 L352 400"/>
+  <g stroke="#F3D48A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.85">
+    <path d="M56.0 400.0 L122.9 313.1 Q145.4 283.7 165.8 276.6"/>
+    <path d="M165.8 276.6 L232.0 366.4"/>
+    <path d="M56.0 400.0 L232.0 366.4"/>
+    <path d="M220.0 400.0 L232.0 366.4"/>
+    <path d="M165.8 276.6 Q186.2 269.5 204.5 284.6 L207.5 287.2 Q225.8 302.3 242.8 299.5"/>
+    <path d="M232.0 366.4 L242.8 299.5"/>
+    <path d="M242.8 299.5 L300.0 297.8"/>
+    <path d="M232.0 366.4 L300.0 297.8"/>
+    <path d="M242.8 299.5 Q259.8 296.7 275.6 276.1 L283.5 265.7 Q301.8 241.9 323.5 246.8"/>
+    <path d="M300.0 297.8 L323.5 246.8"/>
+    <path d="M323.5 246.8 L352.0 346.8"/>
+    <path d="M300.0 297.8 L352.0 346.8"/>
+    <path d="M323.5 246.8 Q345.1 251.6 370.3 285.3 L456.0 400.0"/>
+    <path d="M352.0 346.8 L456.0 400.0"/>
+    <path d="M232.0 366.4 L352.0 346.8"/>
+    <path d="M352.0 346.8 L352.0 400.0"/>
+    <path d="M232.0 366.4 L352.0 400.0"/>
   </g>
-  <g fill="#E4B04A">
-    <circle cx="300" cy="236" r="7.2"/>
-    <circle cx="232" cy="352" r="7.2"/>
-    <circle cx="352" cy="320" r="7.2"/>
+  <g fill="#E4B04A"><circle cx="300.0" cy="297.8" r="7.2"/><circle cx="232.0" cy="366.4" r="7.2"/><circle cx="352.0" cy="346.8" r="7.2"/></g>
+  <g fill="#FFFFFF" stroke="#E4B04A" stroke-width="5"><circle cx="165.8" cy="276.6" r="12"/><circle cx="242.8" cy="299.5" r="10"/><circle cx="323.5" cy="246.8" r="13"/></g>
   </g>
-  <g fill="#FFFFFF" stroke="#E4B04A" stroke-width="5">
-    <circle cx="168" cy="192" r="12"/>
-    <circle cx="244" cy="282" r="10"/>
-    <circle cx="320" cy="140" r="13"/>
-  </g>
-
 </svg>
